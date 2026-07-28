@@ -1,10 +1,36 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsapLib from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsapLib.registerPlugin(ScrollTrigger);
+
+// Custom Premium SVG Icons
+const TransportIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V9.75M8.25 18.75a1.5 1.5 0 01-3 0m9 0a1.5 1.5 0 01-3 0M18.75 18.75h1.125A1.125 1.125 0 0021 17.625v-3.375m0 0V9.75m0 4.5H16.5M21 9.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 9.75v4.5m16.5-4.5V9a2.25 2.25 0 00-2.25-2.25H15M3.375 14.25h17.25m-17.25 0V9.75M3.375 14.25v2.25" />
+    </svg>
+  </span>
+);
+
+const CompassIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3m12 0a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  </span>
+);
+
+const CalendarIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+    </svg>
+  </span>
+);
 
 const GALLERY_PHOTOS = [
   { id: "photo-1522071820081-009f0129c71c", title: "Outdoor Discussion", desc: "A group sharing reflections under a canopy of trees." },
@@ -65,6 +91,25 @@ export default function LivingClassrooms() {
       );
     });
 
+    // LC care items stagger
+    const lcCareItems = document.querySelectorAll(".lc-care-item");
+    if (lcCareItems.length > 0) {
+      gsapLib.fromTo(lcCareItems,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".lc-care-item",
+            start: "top 90%"
+          }
+        }
+      );
+    }
+
     }, containerRef);
 
     return () => {
@@ -93,8 +138,11 @@ export default function LivingClassrooms() {
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
-        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Living Classrooms moves growth out of the traditional school walls and directly into nature. We deliver custom experiential learning, leadership camps, and survival skill workshops tailored for schools, universities, and corporate teams.
+        </p>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+          AVASA runs outdoor learning programs for schools, colleges, and companies across Kerala. Programs include leadership camps, survival skills, and environmental education — all led outside a classroom, in real forests and open land. Transport and trained facilitators are included with every program.
         </p>
       </section>
 
@@ -158,6 +206,43 @@ export default function LivingClassrooms() {
               <h3>Custom Programs</h3>
               <p>Bespoke programs built around your specific educational goals, scheduling, and accommodation preferences.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Care Slice Section */}
+      <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
+        <div className="pinned-left" style={{ color: "var(--sand)" }}>
+          <span className="eyebrow">How We Take Care of You</span>
+          <h2 style={{ color: "var(--sand)" }}>Logistics &amp; Facilitation</h2>
+          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
+            We handle the setup, coordination, and guiding from start to finish so your team can focus on learning. <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>Read about what's included</Link>.
+          </p>
+        </div>
+        
+        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+          <div className="care-list" style={{ color: "var(--sand)" }}>
+            <li className="lc-care-item">
+              <TransportIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Transport Coordination</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Safe transit planning and support to transport groups to and from Wayanad and Munnar.</p>
+              </div>
+            </li>
+            <li className="lc-care-item">
+              <CompassIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Trained Facilitators</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every activity is run by professional coaches skilled in group safety and learning outcomes.</p>
+              </div>
+            </li>
+            <li className="lc-care-item">
+              <CalendarIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Customized Schedules</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Bespoke curriculum matching to align with your school's or corporate objectives.</p>
+              </div>
+            </li>
           </div>
         </div>
       </section>

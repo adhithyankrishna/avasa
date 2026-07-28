@@ -57,6 +57,7 @@ export default function Homepage() {
   const router = useRouter();
 
   useEffect(() => {
+    const mouseMoveHandlers: { el: any; move: any; leave: any }[] = [];
     const mm = gsap.matchMedia(containerRef);
 
     mm.add({
@@ -432,12 +433,78 @@ export default function Homepage() {
         }
       );
 
+      // Care Teaser Section Fade In
+      gsap.fromTo(".care-teaser-item",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".care-teaser-grid",
+            start: "top 85%"
+          }
+        }
+      );
 
+      // 3D Tilt Effect on Care Teaser Items (Desktop only)
+      if (isDesktop) {
+        const teaserItems = gsap.utils.toArray(".care-teaser-item");
+        teaserItems.forEach((item: any) => {
+          const handleMouseMove = (e: MouseEvent) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const percentX = (x - centerX) / centerX;
+            const percentY = (y - centerY) / centerY;
+            
+            const maxRotation = 12; // Gentle and premium 3D rotation
+            
+            gsap.to(item, {
+              duration: 0.35,
+              transformPerspective: 800,
+              rotateY: percentX * maxRotation,
+              rotateX: -percentY * maxRotation,
+              scale: 1.05, // Subtle size increase
+              ease: "power2.out",
+              overwrite: "auto"
+            });
+          };
+
+          const handleMouseLeave = () => {
+            gsap.to(item, {
+              duration: 0.5,
+              transformPerspective: 800,
+              rotateY: 0,
+              rotateX: 0,
+              scale: 1,
+              ease: "power2.out",
+              overwrite: "auto"
+            });
+          };
+
+          item.addEventListener("mousemove", handleMouseMove);
+          item.addEventListener("mouseleave", handleMouseLeave);
+          mouseMoveHandlers.push({ el: item, move: handleMouseMove, leave: handleMouseLeave });
+        });
+      }
 
     });
 
     return () => {
       mm.revert();
+      mouseMoveHandlers.forEach(({ el, move, leave }) => {
+        if (el) {
+          el.removeEventListener("mousemove", move);
+          el.removeEventListener("mouseleave", leave);
+        }
+      });
     };
   }, []);
 
@@ -641,7 +708,49 @@ export default function Homepage() {
         </div>
       </section>
 
-
+      {/* Care Teaser Section */}
+      <section className="care-teaser section-pad" style={{ background: "var(--navy-deep)", color: "var(--sand)", textAlign: "center" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <span className="eyebrow">How We Take Care of You</span>
+          <h2 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 300, fontFamily: "var(--serif-font)", marginBottom: "40px" }}>You focus on the adventure. We handle the rest.</h2>
+          <div className="care-teaser-grid">
+            <div className="care-teaser-item">
+              <span className="care-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 0121 12z" />
+                </svg>
+              </span>
+              <p>Certified safety gear, checked daily</p>
+            </div>
+            <div className="care-teaser-item">
+              <span className="care-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V9.75M8.25 18.75a1.5 1.5 0 01-3 0m9 0a1.5 1.5 0 01-3 0M18.75 18.75h1.125A1.125 1.125 0 0021 17.625v-3.375m0 0V9.75m0 4.5H16.5M21 9.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 9.75v4.5m16.5-4.5V9a2.25 2.25 0 00-2.25-2.25H15M3.375 14.25h17.25m-17.25 0V9.75M3.375 14.25v2.25" />
+                </svg>
+              </span>
+              <p>Transport to and from every location</p>
+            </div>
+            <div className="care-teaser-item">
+              <span className="care-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+                </svg>
+              </span>
+              <p>Meals and refreshments included</p>
+            </div>
+            <div className="care-teaser-item">
+              <span className="care-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15a2.25 2.25 0 002.25-2.25H4.5a2.25 2.25 0 00-2.25-2.25z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                </svg>
+              </span>
+              <p>Photos and videos of your experience</p>
+            </div>
+          </div>
+          <Link href="/how-we-care" className="pillar-link" style={{ display: "inline-block", marginTop: "20px" }}>See everything that's included &rarr;</Link>
+        </div>
+      </section>
 
       {/* FAQ Accordion Section */}
       <section id="faq" className="section-pad">

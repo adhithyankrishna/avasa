@@ -1,10 +1,36 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsapLib from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsapLib.registerPlugin(ScrollTrigger);
+
+// Custom Premium SVG Icons
+const MealsIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+    </svg>
+  </span>
+);
+
+const CompassIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3m12 0a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  </span>
+);
+
+const CalendarIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+    </svg>
+  </span>
+);
 
 const GALLERY_PHOTOS = [
   { id: "photo-1526491109672-74740652b963", title: "Dome Interiors", desc: "Warm lighting and luxury organic linens inside the geodesic dome." },
@@ -62,6 +88,25 @@ export default function Habitat() {
       );
     });
 
+    // Habitat care items stagger
+    const habitatCareItems = document.querySelectorAll(".habitat-care-item");
+    if (habitatCareItems.length > 0) {
+      gsapLib.fromTo(habitatCareItems,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".habitat-care-item",
+            start: "top 90%"
+          }
+        }
+      );
+    }
+
     }, containerRef);
 
     return () => {
@@ -90,8 +135,11 @@ export default function Habitat() {
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
-        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Habitat replaces traditional hotel stays with low-impact, design-forward structures. Experience a deep, immersive stay directly inside the canopy without leaving comfort behind.
+        </p>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+          Want a glamping stay in Kerala? Choose from tree tents, glass domes, or tipi camps at AVASA's Stingray Tribe and Tipi Tribe locations. Each stay includes meals, guide support, and a comfortable setup close to nature — without giving up basic comforts.
         </p>
       </section>
 
@@ -172,6 +220,43 @@ export default function Habitat() {
             <div className="amenity-line">Locally-sourced regional organic dining</div>
             <div className="amenity-line">Round-the-clock safety &amp; guide support</div>
             <div className="amenity-line">Solar power charging stations</div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Care Slice Section */}
+      <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
+        <div className="pinned-left" style={{ color: "var(--sand)" }}>
+          <span className="eyebrow">How We Take Care of You</span>
+          <h2 style={{ color: "var(--sand)" }}>Included In Your Stay</h2>
+          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
+            We handle the details so you can fully enjoy your forest retreat. <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>Read about what's included</Link>.
+          </p>
+        </div>
+        
+        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+          <div className="care-list" style={{ color: "var(--sand)" }}>
+            <li className="habitat-care-item">
+              <MealsIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Meals Included</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Fresh, healthy local meals and hot refreshments served daily.</p>
+              </div>
+            </li>
+            <li className="habitat-care-item">
+              <CompassIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Guide Support</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Trained local guides available for walks and wilderness advice.</p>
+              </div>
+            </li>
+            <li className="habitat-care-item">
+              <CalendarIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Custom Plans</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>We help shape your schedule and activities around your group's goals.</p>
+              </div>
+            </li>
           </div>
         </div>
       </section>

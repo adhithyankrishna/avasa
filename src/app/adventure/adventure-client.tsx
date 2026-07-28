@@ -7,6 +7,31 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsapLib.registerPlugin(ScrollTrigger);
 
+// Custom Premium SVG Icons
+const RopeIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+    </svg>
+  </span>
+);
+
+const CompassIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v18m9-9H3m12 0a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  </span>
+);
+
+const FirstAidIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  </span>
+);
+
 const GALLERY_PHOTOS = [
   { id: "photo-1544551763-46a013bb70d5", title: "Cutting Spray", desc: "Kayaks slicing through the fast waters of Chaliyar." },
   { id: "photo-1522163182402-834f871fd851", title: "Eagle's Flight Launch", desc: "Launching into India's longest canopy zipline." },
@@ -70,6 +95,25 @@ export default function Adventure() {
       );
     });
 
+    // Safety coda items stagger
+    const safetyCodaItems = document.querySelectorAll(".safety-coda-item");
+    if (safetyCodaItems.length > 0) {
+      gsapLib.fromTo(safetyCodaItems,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: ".safety-coda-item",
+            start: "top 90%"
+          }
+        }
+      );
+    }
+
     }, containerRef);
 
     return () => {
@@ -101,8 +145,11 @@ export default function Adventure() {
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
-        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6 }}>
+        <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Thrills planned with precision. We curate high-adrenaline expeditions and activities for individuals, active families, and corporate squads seeking genuine adventure.
+        </p>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+          Looking for adventure activities in Kerala? AVASA runs zipline rides, kayaking trips, and guided treks across Wayanad, Munnar, and the Chaliyar river. Our most popular activity is Eagle's Flight, one of the longest ziplines in India. Every activity includes safety gear, a trained guide, and support from start to finish.
         </p>
       </section>
 
@@ -207,27 +254,28 @@ export default function Adventure() {
         </div>
         
         <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
-          <div className="offer-list">
-            <div className="offer-item">
-              <h3 style={{ color: "var(--gold)" }}>CE &amp; UIAA Standards</h3>
-              <p style={{ color: "rgba(237, 232, 220, 0.7)" }}>
-                Every harness, helmet, carabiner, and pulley carries official climbing certifications from European Union and International Climbing federations.
-              </p>
-            </div>
-            
-            <div className="offer-item">
-              <h3 style={{ color: "var(--gold)" }}>Dual-Redundant Anchors</h3>
-              <p style={{ color: "rgba(237, 232, 220, 0.7)" }}>
-                Ziplines and tree nets use independent backing cables and anchors — if one system experiences load shifting, the reserve line anchors are already locked.
-              </p>
-            </div>
-
-            <div className="offer-item">
-              <h3 style={{ color: "var(--gold)" }}>Pre-Operations Inspections</h3>
-              <p style={{ color: "rgba(237, 232, 220, 0.7)" }}>
-                Our guides log equipment fatigue and inspect every anchor line and cable bracket every morning before a guest ever fits a harness.
-              </p>
-            </div>
+          <div className="care-list" style={{ color: "var(--sand)" }}>
+            <li className="safety-coda-item">
+              <RopeIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified safety gear</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every harness, helmet, and rope carries official climbing certifications.</p>
+              </div>
+            </li>
+            <li className="safety-coda-item">
+              <CompassIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Trained guides</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every activity is led by professional guides who watch over the group.</p>
+              </div>
+            </li>
+            <li className="safety-coda-item">
+              <FirstAidIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>First aid support</h3>
+                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>First aid kit and support are always available on site.</p>
+              </div>
+            </li>
           </div>
         </div>
       </section>
