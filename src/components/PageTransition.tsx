@@ -19,6 +19,8 @@ export default function PageTransition({ children }: PageTransitionProps) {
   useEffect(() => {
     if (pathname.includes("living-classrooms")) {
       setThemeClass("theme-sage");
+    } else if (pathname.includes("how-we-care")) {
+      setThemeClass("theme-sage");
     } else if (pathname.includes("adventure")) {
       setThemeClass("theme-navy-dark");
     } else if (pathname.includes("habitat")) {

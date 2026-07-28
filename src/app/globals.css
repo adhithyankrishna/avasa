@@ -1240,6 +1240,47 @@ footer {
   gap: 20px;
 }
 
+.care-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.care-list li {
+  padding-left: 24px;
+  position: relative;
+}
+.care-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.care-block button {
+  background: var(--gold);
+  color: var(--navy-deep);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 25px var(--gold-glow);
+  transition: all 0.3s ease;
+  margin-top: 32px;
+}
+.care-block button:hover {
+  background: #cba072;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(184, 137, 90, 0.5);
+}
+
 .offer-item {
   border-bottom: 1px solid rgba(18, 35, 63, 0.1);
   padding-bottom: 20px;
@@ -1593,25 +1634,25 @@ footer {
 
 .pillar-card .card-title {
   font-family: var(--serif-font);
-  font-size: 22px;
+  font-size: 24px;
   color: var(--sand);
   font-weight: 300;
   line-height: 1.2;
 }
 
 .pillar-card .card-desc {
-  font-size: 13.5px;
-  color: rgba(237, 232, 220, 0.75);
+  font-size: 15px;
+  color: rgba(237, 232, 220, 0.9);
   line-height: 1.5;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1;
+  max-height: none;
+  margin-top: 8px;
 }
 
 /* Hover effects */
 .pillar-card:hover .card-bg {
-  transform: scale(1.08);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .pillar-card:hover .card-overlay {
@@ -1620,8 +1661,8 @@ footer {
 
 .pillar-card:hover .card-desc {
   opacity: 1;
-  max-height: 80px;
-  margin-top: 10px;
+  max-height: none;
+  margin-top: 8px;
 }
 
 /* Sequential Text Blocks Overlay */

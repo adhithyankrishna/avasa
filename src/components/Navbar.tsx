@@ -54,6 +54,7 @@ export default function Navbar() {
           <Link href="/adventure">Adventure</Link>
           <Link href="/habitat">Habitat</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/how-we-care">How We Care</Link>
         </div>
 
         {/* Centered Logo Link */}
@@ -84,6 +85,7 @@ export default function Navbar() {
             <Link href="/adventure" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Adventure</Link>
             <Link href="/habitat" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Habitat</Link>
             <Link href="/projects" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Projects</Link>
+            <Link href="/how-we-care" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>How We Care</Link>
           </div>
         </div>
       </div>

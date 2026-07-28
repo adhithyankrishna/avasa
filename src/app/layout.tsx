@@ -6,6 +6,7 @@ import EnquiryDrawer from "@/components/EnquiryDrawer";
 import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://avasanature.com"),
   title: "AVASA Nature — Experiences & Beyond",
   description:
     "AVASA Nature is a premium experience design company. Immersive. Purposeful. Transformative. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
@@ -22,8 +23,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AVASA Nature",
+    "url": "https://avasanature.com",
+    "logo": "https://avasanature.com/assets/logo.png",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-6235-800-111",
+        "contactType": "customer service"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91-6235-800-222",
+        "contactType": "customer service"
+      }
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+      </head>
       <body>
         <PageTransition>
           <Navbar />
