@@ -549,7 +549,7 @@ export default function Homepage() {
       <section id="welcome" className="section-pad">
         <span className="eyebrow">Experience &amp; Beyond</span>
         <p>
-          AVASA is more than a resort — we're an experience design company that helps you connect with nature in ways that inspire curiosity and leave a lasting impact.
+          Welcome to AVASA — where the world gets a little quieter, and life gives you real moments back.
         </p>
       </section>
 
