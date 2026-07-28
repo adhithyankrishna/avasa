@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react";
 
 export default function EnquiryDrawer() {
   const [isOpen, setIsOpen] = useState(false);
-  const [step, setStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(1);
+  const [exitingStep, setExitingStep] = useState<number | null>(null);
   const [interest, setInterest] = useState("");
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +14,14 @@ export default function EnquiryDrawer() {
     details: ""
   });
 
+  const transitionToStep = (nextStep: number) => {
+    setExitingStep(activeStep);
+    setTimeout(() => {
+      setActiveStep(nextStep);
+      setExitingStep(null);
+    }, 150);
+  };
+
   useEffect(() => {
     // Listen for custom events to open the drawer from navbar
     const handleOpen = (e: Event) => {
@@ -20,10 +29,11 @@ export default function EnquiryDrawer() {
       const customEvent = e as CustomEvent;
       if (customEvent.detail && customEvent.detail.interest) {
         setInterest(customEvent.detail.interest);
-        setStep(customEvent.detail.step || 2);
+        setActiveStep(customEvent.detail.step || 2);
       } else {
-        setStep(1);
+        setActiveStep(1);
       }
+      setExitingStep(null);
     };
 
     window.addEventListener("open-enquiry-drawer", handleOpen as EventListener);
@@ -34,7 +44,7 @@ export default function EnquiryDrawer() {
 
   const selectOption = (opt: string) => {
     setInterest(opt);
-    setStep(2);
+    transitionToStep(2);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,11 +57,15 @@ export default function EnquiryDrawer() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate sending enquiry data...
-    setStep(3);
+    transitionToStep(3);
   };
 
   const closeDrawer = () => {
     setIsOpen(false);
+    setTimeout(() => {
+      setActiveStep(1);
+      setExitingStep(null);
+    }, 500);
   };
 
   // Determine custom placeholder based on selected option
@@ -68,7 +82,7 @@ export default function EnquiryDrawer() {
   return (
     <>
       {/* Floating CTA Button (Bottom Right) */}
-      <button id="sticky-cta" onClick={() => { setIsOpen(true); setStep(1); }}>
+      <button id="sticky-cta" onClick={() => { setIsOpen(true); setActiveStep(1); setExitingStep(null); }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -96,7 +110,7 @@ export default function EnquiryDrawer() {
           </div>
 
           {/* STEP 1: Select Topic */}
-          <div className={`chat-step ${step === 1 ? "active" : ""}`} id="step-1">
+          <div className={`chat-step ${activeStep === 1 ? "active" : ""} ${exitingStep === 1 ? "exiting" : ""}`} id="step-1">
             <p className="chat-prompt">What are you looking for?</p>
             <div className="chat-options">
               <button className="chat-btn" onClick={() => selectOption("Book a stay or experience")}>
@@ -112,7 +126,7 @@ export default function EnquiryDrawer() {
           </div>
 
           {/* STEP 2: Input Details */}
-          <div className={`chat-step ${step === 2 ? "active" : ""}`} id="step-2">
+          <div className={`chat-step ${activeStep === 2 ? "active" : ""} ${exitingStep === 2 ? "exiting" : ""}`} id="step-2">
             <p className="chat-prompt">
               Tell us more about <strong id="selected-type-label" style={{ color: "var(--gold)" }}>{interest}</strong>:
             </p>
@@ -155,13 +169,13 @@ export default function EnquiryDrawer() {
                 Submit Enquiry
               </button>
             </form>
-            <div className="chat-back" onClick={() => setStep(1)}>
+            <div className="chat-back" onClick={() => transitionToStep(1)}>
               &larr; Back to options
             </div>
           </div>
 
           {/* STEP 3: Success Confirmation */}
-          <div className={`chat-step ${step === 3 ? "active" : ""}`} id="step-3">
+          <div className={`chat-step ${activeStep === 3 ? "active" : ""} ${exitingStep === 3 ? "exiting" : ""}`} id="step-3">
             <div className="chat-success">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -169,6 +183,7 @@ export default function EnquiryDrawer() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
+                className="chat-success-icon"
               >
                 <path
                   strokeLinecap="round"

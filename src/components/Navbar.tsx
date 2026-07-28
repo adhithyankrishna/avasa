@@ -39,9 +39,11 @@ export default function Navbar() {
     <>
       <nav className={scrolled ? "nav-scrolled" : "nav-transparent"}>
         {/* Hamburger Menu Toggle (Mobile only) */}
-        <button className="nav-menu-btn" aria-label="Toggle Menu" onClick={() => setMenuOpen(true)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        <button className="nav-menu-btn" aria-label="Toggle Menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="nav-hamburger-svg">
+            <line x1="3.75" y1="6.75" x2="20.25" y2="6.75" strokeLinecap="round" className={`nav-hamburger-line top-line ${menuOpen ? "open" : ""}`} />
+            <line x1="3.75" y1="12" x2="20.25" y2="12" strokeLinecap="round" className={`nav-hamburger-line mid-line ${menuOpen ? "open" : ""}`} />
+            <line x1="3.75" y1="17.25" x2="20.25" y2="17.25" strokeLinecap="round" className={`nav-hamburger-line bot-line ${menuOpen ? "open" : ""}`} />
           </svg>
         </button>
 

@@ -569,7 +569,7 @@ export default function Homepage() {
 
           {/* Floating Cards (Shift to right side dynamically on scroll) */}
           <div className="cards-row">
-            <div className="pillar-card card-living" onClick={() => router.push("/living-classrooms")}>
+            <div className="pillar-card card-living" onClick={() => router.push("/living-classrooms")} onTouchStart={() => {}}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.png')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -579,7 +579,7 @@ export default function Homepage() {
               </div>
             </div>
             
-            <div className="pillar-card card-adventure" onClick={() => router.push("/adventure")}>
+            <div className="pillar-card card-adventure" onClick={() => router.push("/adventure")} onTouchStart={() => {}}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/adventure_hero.png')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -589,7 +589,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="pillar-card card-habitat" onClick={() => router.push("/habitat")}>
+            <div className="pillar-card card-habitat" onClick={() => router.push("/habitat")} onTouchStart={() => {}}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/habitat_hero.png')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -599,7 +599,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="pillar-card card-projects" onClick={() => router.push("/projects")}>
+            <div className="pillar-card card-projects" onClick={() => router.push("/projects")} onTouchStart={() => {}}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/projects_hero.png')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
