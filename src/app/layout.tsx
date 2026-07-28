@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "AVASA Nature — Experiences & Beyond",
   description:
     "AVASA Nature is a premium experience design company. Immersive. Purposeful. Transformative. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+  icons: {
+    icon: "/assets/logo.png",
+  },
 };
 
 export const viewport: Viewport = {

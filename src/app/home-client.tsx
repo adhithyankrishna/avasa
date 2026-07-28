@@ -576,6 +576,7 @@ export default function Homepage() {
                 <span>Cooperate</span>
               </Link>
             </div>
+            <div className="quick-nav-fade" />
           </div>
         </section>
       </div>
