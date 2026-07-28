@@ -254,41 +254,29 @@ export default function Homepage() {
         showcaseTimeline.to(".block-projects", { opacity: 1, y: 0, pointerEvents: "auto", duration: 0.8 }, "-=0.4");
         showcaseTimeline.to({}, { duration: 3.0 });
       } else {
-        // Mobile Layout: elements flow naturally in CSS, simple viewport reveal here
-        const cards = gsap.utils.toArray(".pillar-card");
-        cards.forEach((card: any) => {
-          gsap.fromTo(card,
-            { opacity: 0, y: 30 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: card,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-              }
-            }
-          );
-        });
+        // Mobile: merged card per pillar — image wipe reveal + staggered text, no pin/3D
+        gsap.utils.toArray(".pillar-merged-card").forEach((card: any) => {
+          const img = card.querySelector(".merged-card-img");
+          const num = card.querySelector(".merged-card-num");
+          const title = card.querySelector("h3");
+          const rest = card.querySelectorAll(".merged-card-body p, .merged-card-body .pillar-link");
 
-        const blocks = gsap.utils.toArray(".pillar-content");
-        blocks.forEach((block: any) => {
-          gsap.fromTo(block,
-            { opacity: 0, y: 20 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 0.8,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: block,
-                start: "top 85%",
-                toggleActions: "play none none reverse"
-              }
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: card,
+              start: "top 80%",
+              toggleActions: "play none none reverse"
             }
-          );
+          });
+
+          const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          tl.fromTo(img,
+            reduce ? { opacity: 0 } : { clipPath: "inset(0 0 100% 0)" },
+            reduce ? { opacity: 1, duration: 0.4 } : { clipPath: "inset(0 0 0% 0)", duration: 0.9, ease: "power3.out" }
+          )
+            .fromTo(num, { opacity: 0, y: 15 }, { opacity: 0.8, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.3")
+            .fromTo(title, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.35")
+            .fromTo(rest, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", stagger: 0.08 }, "-=0.3");
         });
       }
 
@@ -682,6 +670,49 @@ export default function Homepage() {
               <Link href="/projects" className="pillar-link">
                 Explore Projects &rarr;
               </Link>
+            </div>
+          </div>
+
+          {/* Mobile-only merged pillar cards — desktop uses .cards-row + .showcase-content-blocks above */}
+          <div className="pillars-mobile-list">
+            <div className="pillar-merged-card" onClick={() => router.push("/living-classrooms")}>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.png')" }}></div>
+              <div className="merged-card-body">
+                <span className="merged-card-num">01</span>
+                <h3>Living Classrooms</h3>
+                <p>Learning outside a classroom, in real forests and open land. We run outdoor camps and team programs for schools, colleges, and companies — hands-on, not just lectures.</p>
+                <Link href="/living-classrooms" className="pillar-link">Explore Living Classrooms &rarr;</Link>
+              </div>
+            </div>
+
+            <div className="pillar-merged-card" onClick={() => router.push("/adventure")}>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/adventure_hero.png')" }}></div>
+              <div className="merged-card-body">
+                <span className="merged-card-num">02</span>
+                <h3>Adventure</h3>
+                <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
+                <Link href="/adventure" className="pillar-link">Explore Adventure &rarr;</Link>
+              </div>
+            </div>
+
+            <div className="pillar-merged-card" onClick={() => router.push("/habitat")}>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/habitat_hero.png')" }}></div>
+              <div className="merged-card-body">
+                <span className="merged-card-num">03</span>
+                <h3>Habitat</h3>
+                <p>Sleep among the trees. Choose a tree tent, a glass dome, or a tipi — comfortable stays deep in nature, without giving up comfort.</p>
+                <Link href="/habitat" className="pillar-link">Explore Habitat &rarr;</Link>
+              </div>
+            </div>
+
+            <div className="pillar-merged-card" onClick={() => router.push("/projects")}>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/projects_hero.png')" }}></div>
+              <div className="merged-card-body">
+                <span className="merged-card-num">04</span>
+                <h3>Projects</h3>
+                <p>We design and build adventure parks — ziplines, tree tents, and nature trails — for resorts, schools, and tourism projects across India.</p>
+                <Link href="/projects" className="pillar-link">Explore Projects &rarr;</Link>
+              </div>
             </div>
           </div>
         </div>
