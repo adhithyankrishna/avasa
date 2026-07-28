@@ -132,7 +132,7 @@ export default function Adventure() {
         <div 
           className="bg" 
           style={{ 
-            backgroundImage: "url('/assets/images/adventure_hero.png')",
+            backgroundImage: "url('/assets/images/adventure_hero.webp')",
             filter: "contrast(1.15) brightness(0.85)"
           }}
         ></div>

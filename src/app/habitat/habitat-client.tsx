@@ -124,7 +124,7 @@ export default function Habitat() {
       <section className="sub-hero">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('/assets/images/habitat_hero.png')" }}
+          style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">

@@ -84,7 +84,7 @@ export default function ProjectsAndConsulting() {
       <section className="sub-hero">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('/assets/images/projects_hero.png')" }}
+          style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">

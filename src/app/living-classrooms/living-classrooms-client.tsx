@@ -127,7 +127,7 @@ export default function LivingClassrooms() {
       <section className="sub-hero">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.png')" }}
+          style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">

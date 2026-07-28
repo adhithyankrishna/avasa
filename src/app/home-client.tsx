@@ -306,13 +306,13 @@ export default function Homepage() {
         const tiles: HTMLDivElement[] = [];
 
         const localFallbacks = [
-          "/assets/images/living_classrooms_hero.png",
-          "/assets/images/adventure_hero.png",
-          "/assets/images/habitat_hero.png",
-          "/assets/images/projects_hero.png",
-          "/assets/images/safety_gear.png",
-          "/assets/images/safety_inspect.png",
-          "/assets/images/misty_tea_hills.png"
+          "/assets/images/living_classrooms_hero.webp",
+          "/assets/images/adventure_hero.webp",
+          "/assets/images/habitat_hero.webp",
+          "/assets/images/projects_hero.webp",
+          "/assets/images/safety_gear.webp",
+          "/assets/images/safety_inspect.webp",
+          "/assets/images/misty_tea_hills.webp"
         ];
 
         const totalTiles = 20;
@@ -594,7 +594,7 @@ export default function Homepage() {
           {/* Floating Cards (Shift to right side dynamically on scroll) */}
           <div className="cards-row">
             <div className="pillar-card card-living" onClick={() => router.push("/living-classrooms")} onTouchStart={() => {}}>
-              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.png')" }}></div>
+              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">01</span>
@@ -604,7 +604,7 @@ export default function Homepage() {
             </div>
             
             <div className="pillar-card card-adventure" onClick={() => router.push("/adventure")} onTouchStart={() => {}}>
-              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/adventure_hero.png')" }}></div>
+              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">02</span>
@@ -614,7 +614,7 @@ export default function Homepage() {
             </div>
 
             <div className="pillar-card card-habitat" onClick={() => router.push("/habitat")} onTouchStart={() => {}}>
-              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/habitat_hero.png')" }}></div>
+              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">03</span>
@@ -624,7 +624,7 @@ export default function Homepage() {
             </div>
 
             <div className="pillar-card card-projects" onClick={() => router.push("/projects")} onTouchStart={() => {}}>
-              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/projects_hero.png')" }}></div>
+              <div className="card-bg" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">04</span>
@@ -676,7 +676,7 @@ export default function Homepage() {
           {/* Mobile-only merged pillar cards — desktop uses .cards-row + .showcase-content-blocks above */}
           <div className="pillars-mobile-list">
             <div className="pillar-merged-card" onClick={() => router.push("/living-classrooms")}>
-              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.png')" }}></div>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">01</span>
                 <h3>Living Classrooms</h3>
@@ -686,7 +686,7 @@ export default function Homepage() {
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/adventure")}>
-              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/adventure_hero.png')" }}></div>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">02</span>
                 <h3>Adventure</h3>
@@ -696,7 +696,7 @@ export default function Homepage() {
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/habitat")}>
-              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/habitat_hero.png')" }}></div>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">03</span>
                 <h3>Habitat</h3>
@@ -706,7 +706,7 @@ export default function Homepage() {
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/projects")}>
-              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/projects_hero.png')" }}></div>
+              <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">04</span>
                 <h3>Projects</h3>

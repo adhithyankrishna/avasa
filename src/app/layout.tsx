@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   description:
     "AVASA Nature is a premium experience design company. Immersive. Purposeful. Transformative. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
   icons: {
-    icon: "/assets/logo.png",
+    icon: "/assets/logo.webp",
+  },
+  verification: {
+    google: "google47a5b5ff125c6b41",
   },
 };
 
@@ -31,7 +34,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "AVASA Nature",
     "url": "https://avasanature.com",
-    "logo": "https://avasanature.com/assets/logo.png",
+    "logo": "https://avasanature.com/assets/logo.webp",
     "contactPoint": [
       {
         "@type": "ContactPoint",

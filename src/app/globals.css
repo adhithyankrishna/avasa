@@ -262,12 +262,12 @@ nav .btn-enquire:hover {
 }
 
 .layer.hill-back {
-  background-image: url('/assets/images/misty_tea_hills.png');
+  background-image: url('/assets/images/misty_tea_hills.webp');
   transform: scale(1.05);
 }
 
 .layer.bridge-mid {
-  background-image: url('/assets/images/suspension_bridge.png');
+  background-image: url('/assets/images/suspension_bridge.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -277,7 +277,7 @@ nav .btn-enquire:hover {
 }
 
 .layer.dome-tent {
-  background-image: url('/assets/images/glowing_dome_tent.png');
+  background-image: url('/assets/images/glowing_dome_tent.webp');
   background-size: cover;
   width: 38%;
   height: 48%;
@@ -481,7 +481,7 @@ nav .btn-enquire:hover {
 
 /* Themes per Pillar */
 #living .pillar-bg {
-  background-image: url('/assets/images/living_classrooms_hero.png');
+  background-image: url('/assets/images/living_classrooms_hero.webp');
 }
 
 #living .pillar-overlay {
@@ -498,7 +498,7 @@ nav .btn-enquire:hover {
 }
 
 #adventure .pillar-bg {
-  background-image: url('/assets/images/adventure_hero.png');
+  background-image: url('/assets/images/adventure_hero.webp');
 }
 
 #adventure .pillar-overlay {
@@ -506,7 +506,7 @@ nav .btn-enquire:hover {
 }
 
 #habitat .pillar-bg {
-  background-image: url('/assets/images/habitat_hero.png');
+  background-image: url('/assets/images/habitat_hero.webp');
 }
 
 #habitat .pillar-overlay {
@@ -523,7 +523,7 @@ nav .btn-enquire:hover {
 }
 
 #projects .pillar-bg {
-  background-image: url('/assets/images/projects_hero.png');
+  background-image: url('/assets/images/projects_hero.webp');
 }
 
 #projects .pillar-overlay {
@@ -703,11 +703,11 @@ nav .btn-enquire:hover {
 }
 
 #safety1 .bg {
-  background-image: url('/assets/images/safety_gear.png');
+  background-image: url('/assets/images/safety_gear.webp');
 }
 
 #safety2 .bg {
-  background-image: url('/assets/images/safety_inspect.png');
+  background-image: url('/assets/images/safety_inspect.webp');
 }
 
 .safety-panel .overlay {
@@ -1627,19 +1627,19 @@ footer {
 }
 
 .showcase-bg-layer.bg-living {
-  background-image: url('/assets/images/living_classrooms_hero.png');
+  background-image: url('/assets/images/living_classrooms_hero.webp');
 }
 
 .showcase-bg-layer.bg-adventure {
-  background-image: url('/assets/images/adventure_hero.png');
+  background-image: url('/assets/images/adventure_hero.webp');
 }
 
 .showcase-bg-layer.bg-habitat {
-  background-image: url('/assets/images/habitat_hero.png');
+  background-image: url('/assets/images/habitat_hero.webp');
 }
 
 .showcase-bg-layer.bg-projects {
-  background-image: url('/assets/images/projects_hero.png');
+  background-image: url('/assets/images/projects_hero.webp');
 }
 
 .showcase-bg-overlay {

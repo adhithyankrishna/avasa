@@ -168,7 +168,7 @@ export default function HowWeCareClient() {
   return (
     <div ref={containerRef} className="subpage-view">
       <section className="sub-hero">
-        <div className="bg" style={{ backgroundImage: "url('/assets/images/how_we_care_hero.png')" }}></div>
+        <div className="bg" style={{ backgroundImage: "url('/assets/images/how_we_care_hero.webp')" }}></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
           <span className="eyebrow">How We Take Care of You</span>
