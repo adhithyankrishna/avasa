@@ -647,7 +647,7 @@ export default function Homepage() {
 
             <div className="pillar-content block-adventure">
               <span className="eyebrow">02 &mdash; Adventure Activities</span>
-              <h2>Home to Eagle's Flight &mdash; India's longest zipline.</h2>
+              <h2>Eagle's Flight &mdash; India's longest zipline.</h2>
               <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
               <Link href="/adventure" className="pillar-link">
                 Explore Adventure Activities &rarr;

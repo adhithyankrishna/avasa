@@ -1723,6 +1723,7 @@ footer {
   right: 0;
   padding: 24px;
   z-index: 5;
+  text-align: center;
 }
 
 .pillar-card .card-num {
@@ -1851,6 +1852,7 @@ footer {
   .merged-card-body {
     padding: 20px;
     color: var(--sand);
+    text-align: center;
   }
 
   .merged-card-num {

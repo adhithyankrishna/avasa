@@ -139,7 +139,7 @@ export default function Adventure() {
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
           <span className="eyebrow" style={{ color: "var(--gold)" }}>Pillar 02 &mdash; Adventure</span>
-          <h1>Home to Eagle's Flight &mdash; India's longest zipline</h1>
+          <h1>Eagle's Flight &mdash; India's longest zipline</h1>
         </div>
       </section>
 
