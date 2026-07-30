@@ -1882,8 +1882,32 @@ footer {
 }
 
 @media(max-width: 768px) {
+  #hero-wrap {
+    height: 140svh;
+  }
+
+  #hero-container {
+    height: 100svh;
+    align-items: flex-end;
+    padding: 0 0 calc(230px + env(safe-area-inset-bottom));
+  }
+
+  #hero-container .hero-content {
+    width: min(92vw, 420px);
+    padding: 0 18px;
+    transform: translateY(0);
+  }
+
   #hero-container h1 {
     font-size: clamp(32px, 7vw, 48px) !important;
+    line-height: 1.05;
+    margin-bottom: 10px;
+  }
+
+  #hero-container p {
+    font-size: 10px;
+    letter-spacing: 2.4px;
+    line-height: 1.5;
   }
 
   .sub-hero h1 {
@@ -1908,7 +1932,12 @@ footer {
   }
 
   .hero-quick-nav {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(28px + env(safe-area-inset-bottom));
+    padding: 0 0 0 20px;
+    justify-content: flex-start;
   }
 
   .quick-nav-bar {
@@ -1917,14 +1946,24 @@ footer {
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
-    padding: 0 10px;
+    width: auto;
+    max-width: none;
+    padding: 0;
+    border-radius: 6px 0 0 6px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
     scroll-snap-type: x proximity;
     position: relative;
+    scrollbar-width: none;
+  }
+
+  .quick-nav-bar::-webkit-scrollbar {
+    display: none;
   }
 
   .quick-nav-item {
-    flex: 0 0 100px;
-    padding: 14px 6px;
+    flex: 0 0 96px;
+    min-height: 64px;
+    padding: 12px 6px 11px;
     scroll-snap-align: center;
   }
 
@@ -1933,9 +1972,9 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 40px;
-    width: 32px;
-    background: linear-gradient(to right, transparent, var(--sand) 80%);
+    bottom: calc(28px + env(safe-area-inset-bottom));
+    width: 42px;
+    background: linear-gradient(to right, transparent, var(--sand) 72%);
     pointer-events: none;
     z-index: 21;
   }
@@ -1983,12 +2022,11 @@ footer {
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
-    padding: 0 10px;
   }
 
   .quick-nav-item {
-    flex: 0 0 100px;
-    padding: 14px 6px;
+    flex: 0 0 92px;
+    padding: 11px 6px 10px;
   }
 
   .quick-nav-item svg {

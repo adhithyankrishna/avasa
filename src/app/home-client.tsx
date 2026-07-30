@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Curated list of 40 cinematic nature/adventure photos from Unsplash for the photo scatter
+
 const PHOTO_IDS = [
   "photo-1522163182402-834f871fd851", // Ziplines/climbing
   "photo-1501555088652-021faa106b9b", // Mountain path
@@ -335,7 +335,7 @@ export default function Homepage() {
         const rows = 5;
         const cellW = 100 / cols;
         const cellH = 100 / rows;
-        
+
         const cells: { r: number; c: number }[] = [];
         for (let r = 0; r < rows; r++) {
           for (let c = 0; c < cols; c++) {
@@ -445,15 +445,15 @@ export default function Homepage() {
             const rect = item.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
+
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
+
             const percentX = (x - centerX) / centerX;
             const percentY = (y - centerY) / centerY;
-            
+
             const maxRotation = 12; // Gentle and premium 3D rotation
-            
+
             gsap.to(item, {
               duration: 0.35,
               transformPerspective: 800,
@@ -500,7 +500,7 @@ export default function Homepage() {
   const toggleFaq = (e: React.MouseEvent) => {
     const item = (e.currentTarget as HTMLElement).closest(".faq-item");
     if (!item) return;
-    
+
     // Close other items
     const allItems = document.querySelectorAll(".faq-item");
     allItems.forEach(i => {
@@ -522,14 +522,14 @@ export default function Homepage() {
           <div className="layer mist-fog"></div>
           <div className="layer dome-tent"></div>
           <div className="layer vignette-overlay"></div>
-          
+
           <div className="hero-content">
             <h1 className="serif-title">Experiences &amp; Beyond</h1>
             <p>Immersive &middot; Purposeful &middot; Transformative</p>
           </div>
-          
+
           <div className="scroll-cue">Scroll ↓</div>
-          
+
           {/* Bottom quick navigation bar */}
           <div className="hero-quick-nav">
             <div className="quick-nav-bar">
@@ -593,7 +593,7 @@ export default function Homepage() {
 
           {/* Floating Cards (Shift to right side dynamically on scroll) */}
           <div className="cards-row">
-            <div className="pillar-card card-living" onClick={() => router.push("/living-classrooms")} onTouchStart={() => {}}>
+            <div className="pillar-card card-living" onClick={() => router.push("/living-classrooms")} onTouchStart={() => { }}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -602,8 +602,8 @@ export default function Homepage() {
                 <p className="card-desc">Outdoor classes, camps, and team activities for schools and companies. Real learning, outside.</p>
               </div>
             </div>
-            
-            <div className="pillar-card card-adventure" onClick={() => router.push("/adventure")} onTouchStart={() => {}}>
+
+            <div className="pillar-card card-adventure" onClick={() => router.push("/adventure")} onTouchStart={() => { }}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -613,7 +613,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="pillar-card card-habitat" onClick={() => router.push("/habitat")} onTouchStart={() => {}}>
+            <div className="pillar-card card-habitat" onClick={() => router.push("/habitat")} onTouchStart={() => { }}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -623,7 +623,7 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="pillar-card card-projects" onClick={() => router.push("/projects")} onTouchStart={() => {}}>
+            <div className="pillar-card card-projects" onClick={() => router.push("/projects")} onTouchStart={() => { }}>
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
@@ -797,7 +797,7 @@ export default function Homepage() {
               Yes. Every activity uses certified safety gear, and every session is led by a trained guide. <Link href="/how-we-care">See everything we do to keep you safe.</Link>
             </div>
           </div>
-          
+
           <div className="faq-item" onClick={toggleFaq}>
             <div className="faq-q">
               <span>Can the experience be customized for our group, school, or company?</span>
@@ -807,7 +807,7 @@ export default function Homepage() {
               Yes — program agendas, location trails, group sizes, difficulty levels, and stay setups can be fully customized to meet your goals and budget.
             </div>
           </div>
-          
+
           <div className="faq-item" onClick={toggleFaq}>
             <div className="faq-q">
               <span>What is the minimum age or fitness requirement?</span>
@@ -817,7 +817,7 @@ export default function Homepage() {
               Requirements vary by activity — our booking team will recommend the right stay or adventure grade once we know your group's details.
             </div>
           </div>
-          
+
           <div className="faq-item" onClick={toggleFaq}>
             <div className="faq-q">
               <span>Do you conduct programs at our school or location?</span>
@@ -827,7 +827,7 @@ export default function Homepage() {
               Yes — Living Classrooms programs can be delivered directly on-campus, or as off-site expeditions at an AVASA wilderness destination.
             </div>
           </div>
-          
+
           <div className="faq-item" onClick={toggleFaq}>
             <div className="faq-q">
               <span>What are the available dates and destinations?</span>
