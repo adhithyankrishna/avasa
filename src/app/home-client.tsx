@@ -589,7 +589,7 @@ export default function Homepage() {
             <div className="showcase-bg-overlay"></div>
           </div>
 
-          <h2 className="showcase-title serif-title">The Four Pillars</h2>
+          <h2 className="showcase-title serif-title">What We Do</h2>
 
           {/* Floating Cards (Shift to right side dynamically on scroll) */}
           <div className="cards-row">
@@ -598,7 +598,7 @@ export default function Homepage() {
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">01</span>
-                <h3 className="card-title">Living Classrooms</h3>
+                <h3 className="card-title">Outdoor Learning</h3>
                 <p className="card-desc">Outdoor classes, camps, and team activities for schools and companies. Real learning, outside.</p>
               </div>
             </div>
@@ -608,7 +608,7 @@ export default function Homepage() {
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">02</span>
-                <h3 className="card-title">Adventure</h3>
+                <h3 className="card-title">Adventure Activities</h3>
                 <p className="card-desc">Zipline, kayaking, and trekking in Kerala's forests. Try Eagle's Flight, our longest zipline.</p>
               </div>
             </div>
@@ -618,7 +618,7 @@ export default function Homepage() {
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">03</span>
-                <h3 className="card-title">Habitat</h3>
+                <h3 className="card-title">Luxury Stays</h3>
                 <p className="card-desc">Sleep in a tree tent, dome, or tipi. Comfortable stays, close to nature.</p>
               </div>
             </div>
@@ -628,7 +628,7 @@ export default function Homepage() {
               <div className="card-overlay"></div>
               <div className="card-content">
                 <span className="card-num">04</span>
-                <h3 className="card-title">Projects</h3>
+                <h3 className="card-title">B2B Services</h3>
                 <p className="card-desc">We build ziplines, tree tents, and adventure parks for resorts and schools across India.</p>
               </div>
             </div>
@@ -637,38 +637,38 @@ export default function Homepage() {
           {/* Sequential Text Blocks (Fades in on the left side) */}
           <div className="showcase-content-blocks">
             <div className="pillar-content block-living">
-              <span className="eyebrow" style={{ color: "var(--sand)" }}>01 &mdash; Living Classrooms</span>
+              <span className="eyebrow" style={{ color: "var(--sand)" }}>01 &mdash; Outdoor Learning</span>
               <h2>The outdoors, as the curriculum.</h2>
               <p>Learning outside a classroom, in real forests and open land. We run outdoor camps and team programs for schools, colleges, and companies — hands-on, not just lectures.</p>
               <Link href="/living-classrooms" className="pillar-link">
-                Explore Living Classrooms &rarr;
+                Explore Outdoor Learning &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-adventure">
-              <span className="eyebrow">02 &mdash; Adventure</span>
+              <span className="eyebrow">02 &mdash; Adventure Activities</span>
               <h2>Home to Eagle's Flight &mdash; India's longest zipline.</h2>
               <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
               <Link href="/adventure" className="pillar-link">
-                Explore Adventure &rarr;
+                Explore Adventure Activities &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-habitat">
-              <span className="eyebrow">03 &mdash; Habitat</span>
+              <span className="eyebrow">03 &mdash; Luxury Stays</span>
               <h2>Sleep among the treetops.</h2>
               <p>Sleep among the trees. Choose a tree tent, a glass dome, or a tipi — comfortable stays deep in nature, without giving up comfort.</p>
               <Link href="/habitat" className="pillar-link">
-                Explore Habitat &rarr;
+                Explore Luxury Stays &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-projects">
-              <span className="eyebrow">04 &mdash; Projects &amp; Consulting</span>
+              <span className="eyebrow">04 &mdash; B2B Services</span>
               <h2>We build the infrastructure others dream in.</h2>
               <p>We design and build adventure parks — ziplines, tree tents, and nature trails — for resorts, schools, and tourism projects across India.</p>
               <Link href="/projects" className="pillar-link">
-                Explore Projects &rarr;
+                Explore B2B Services &rarr;
               </Link>
             </div>
           </div>
@@ -679,9 +679,9 @@ export default function Homepage() {
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">01</span>
-                <h3>Living Classrooms</h3>
+                <h3>Outdoor Learning</h3>
                 <p>Learning outside a classroom, in real forests and open land. We run outdoor camps and team programs for schools, colleges, and companies — hands-on, not just lectures.</p>
-                <Link href="/living-classrooms" className="pillar-link">Explore Living Classrooms &rarr;</Link>
+                <Link href="/living-classrooms" className="pillar-link">Explore Outdoor Learning &rarr;</Link>
               </div>
             </div>
 
@@ -689,9 +689,9 @@ export default function Homepage() {
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">02</span>
-                <h3>Adventure</h3>
+                <h3>Adventure Activities</h3>
                 <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
-                <Link href="/adventure" className="pillar-link">Explore Adventure &rarr;</Link>
+                <Link href="/adventure" className="pillar-link">Explore Adventure Activities &rarr;</Link>
               </div>
             </div>
 
@@ -699,9 +699,9 @@ export default function Homepage() {
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">03</span>
-                <h3>Habitat</h3>
+                <h3>Luxury Stays</h3>
                 <p>Sleep among the trees. Choose a tree tent, a glass dome, or a tipi — comfortable stays deep in nature, without giving up comfort.</p>
-                <Link href="/habitat" className="pillar-link">Explore Habitat &rarr;</Link>
+                <Link href="/habitat" className="pillar-link">Explore Luxury Stays &rarr;</Link>
               </div>
             </div>
 
@@ -709,9 +709,9 @@ export default function Homepage() {
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="merged-card-body">
                 <span className="merged-card-num">04</span>
-                <h3>Projects</h3>
+                <h3>B2B Services</h3>
                 <p>We design and build adventure parks — ziplines, tree tents, and nature trails — for resorts, schools, and tourism projects across India.</p>
-                <Link href="/projects" className="pillar-link">Explore Projects &rarr;</Link>
+                <Link href="/projects" className="pillar-link">Explore B2B Services &rarr;</Link>
               </div>
             </div>
           </div>

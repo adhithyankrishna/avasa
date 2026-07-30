@@ -108,7 +108,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 6vw;
+  padding: 24px 4vw;
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -123,7 +123,7 @@ nav.nav-scrolled {
   background: var(--glass-navy);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 16px 6vw;
+  padding: 16px 4vw;
   border-bottom: 1px solid rgba(237, 232, 220, 0.08);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
@@ -173,45 +173,55 @@ nav.nav-scrolled .nav-logo {
   color: var(--gold);
 }
 
-/* Nav Links - hidden on load, fades/drifts in */
-nav .nav-links {
+/* Nav Links Left & Right - hidden on load, fades/drifts in */
+nav .nav-links-left {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   opacity: 0;
   transform: translateX(-20px);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
-nav.nav-scrolled .nav-links {
+nav.nav-scrolled .nav-links-left {
   opacity: 0.85;
   transform: translateX(0);
   pointer-events: auto;
 }
 
-nav .nav-links a {
-  font-size: 13px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-nav .nav-links a:hover {
-  color: var(--gold);
-}
-
-/* Nav Action - hidden on load */
-nav .nav-action {
+nav .nav-group-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
   opacity: 0;
   transform: translateX(20px);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
 }
 
-nav.nav-scrolled .nav-action {
+nav.nav-scrolled .nav-group-right {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
+}
+
+nav .nav-links-right {
+  display: flex;
+  gap: 24px;
+}
+
+nav .nav-links-left a,
+nav .nav-links-right a {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+nav .nav-links-left a:hover,
+nav .nav-links-right a:hover {
+  color: var(--gold);
 }
 
 nav .btn-enquire {
@@ -1868,11 +1878,11 @@ footer {
     display: block !important;
   }
 
-  nav .nav-links {
+  nav .nav-links-left {
     display: none !important;
   }
 
-  nav .nav-action {
+  nav .nav-group-right {
     display: none !important;
   }
 }

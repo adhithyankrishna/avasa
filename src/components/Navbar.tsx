@@ -48,13 +48,10 @@ export default function Navbar() {
         </button>
 
         {/* Left Links */}
-        <div className="nav-links">
-          <Link href="/">Home</Link>
-          <Link href="/living-classrooms">Living Classrooms</Link>
-          <Link href="/adventure">Adventure</Link>
-          <Link href="/habitat">Habitat</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/how-we-care">How We Care</Link>
+        <div className="nav-links-left">
+          <Link href="/">HOME</Link>
+          <Link href="/living-classrooms">OUTDOOR LEARNING</Link>
+          <Link href="/adventure">ADVENTURE ACTIVITIES</Link>
         </div>
 
         {/* Centered Logo Link */}
@@ -62,11 +59,18 @@ export default function Navbar() {
           <Logo className="nav-logo" />
         </Link>
 
-        {/* Right Action Button */}
-        <div className="nav-action">
-          <button onClick={openEnquiry} className="btn-enquire">
-            Enquire Now
-          </button>
+        {/* Right Links & Action */}
+        <div className="nav-group-right">
+          <div className="nav-links-right">
+            <Link href="/habitat">LUXURY STAYS</Link>
+            <Link href="/projects">B2B SERVICES</Link>
+            <Link href="/how-we-care">SAFETY & CARE</Link>
+          </div>
+          <div className="nav-action">
+            <button onClick={openEnquiry} className="btn-enquire">
+              Enquire Now
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -80,12 +84,12 @@ export default function Navbar() {
             <span className="mobile-menu-close" onClick={() => setMenuOpen(false)}>&times;</span>
           </div>
           <div className="mobile-menu-links">
-            <Link href="/" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link href="/living-classrooms" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Living Classrooms</Link>
-            <Link href="/adventure" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Adventure</Link>
-            <Link href="/habitat" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Habitat</Link>
-            <Link href="/projects" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>Projects</Link>
-            <Link href="/how-we-care" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>How We Care</Link>
+            <Link href="/" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>HOME</Link>
+            <Link href="/living-classrooms" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>OUTDOOR LEARNING</Link>
+            <Link href="/adventure" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>ADVENTURE ACTIVITIES</Link>
+            <Link href="/habitat" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>LUXURY STAYS</Link>
+            <Link href="/projects" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>B2B SERVICES</Link>
+            <Link href="/how-we-care" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>SAFETY & CARE</Link>
           </div>
         </div>
       </div>
