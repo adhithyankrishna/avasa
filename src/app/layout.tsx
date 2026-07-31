@@ -7,15 +7,15 @@ import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://avasaexperiences.com"),
-  title: "AVASA Nature — Experiences & Beyond",
+  title: "AVASA Nature | Premium Glamping & Adventure Experiences in Kerala",
   description:
-    "AVASA Nature is a premium experience design company. Immersive. Purposeful. Transformative. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+    "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
   verification: {
     google: "google47a5b5ff125c6b41",
   },
   openGraph: {
-    title: "AVASA Nature — Experiences & Beyond",
-    description: "AVASA Nature is a premium experience design company. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+    title: "AVASA Nature | Premium Glamping & Adventure Experiences",
+    description: "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
     url: "https://avasaexperiences.com",
     siteName: "AVASA Nature",
     images: [
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "AVASA Nature — Experiences & Beyond",
-    description: "AVASA Nature is a premium experience design company. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+    title: "AVASA Nature | Premium Glamping & Adventure Experiences",
+    description: "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
     images: ["/assets/logo.webp"],
   },
 };

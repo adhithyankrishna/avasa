@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import HomepageClient from "./home-client";
 
 export const metadata: Metadata = {
-  title: "AVASA Nature — Experiences & Beyond",
-  description: "Adventure, glamping stays, and outdoor learning across Kerala. Zipline, kayak, and sleep among the treetops with AVASA Nature.",
+  title: "AVASA Nature | Premium Glamping & Adventure Experiences in Kerala",
+  description: "Experience premium outdoor stays, geodesic domes, and adventure activities in Wayanad, Kerala. Book ziplines, kayaking, and outdoor learning with AVASA Nature.",
 };
 
 export default function Page() {
