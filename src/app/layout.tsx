@@ -13,6 +13,28 @@ export const metadata: Metadata = {
   verification: {
     google: "google47a5b5ff125c6b41",
   },
+  openGraph: {
+    title: "AVASA Nature — Experiences & Beyond",
+    description: "AVASA Nature is a premium experience design company. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+    url: "https://avasaexperiences.com",
+    siteName: "AVASA Nature",
+    images: [
+      {
+        url: "/assets/logo.webp",
+        width: 581,
+        height: 569,
+        alt: "AVASA Nature Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "AVASA Nature — Experiences & Beyond",
+    description: "AVASA Nature is a premium experience design company. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
+    images: ["/assets/logo.webp"],
+  },
 };
 
 export const viewport: Viewport = {
