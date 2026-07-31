@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   return routes.map((route) => ({
-    url: `https://avasanature.com${route}`,
+    url: `https://avasaexperiences.com${route}`,
     lastModified: now,
     changeFrequency: "weekly",
     priority: route === "" ? 1.0 : 0.8,

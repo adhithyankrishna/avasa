@@ -6,7 +6,7 @@ import EnquiryDrawer from "@/components/EnquiryDrawer";
 import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://avasanature.com"),
+  metadataBase: new URL("https://avasaexperiences.com"),
   title: "AVASA Nature — Experiences & Beyond",
   description:
     "AVASA Nature is a premium experience design company. Immersive. Purposeful. Transformative. Sleep among the treetops, adventure across canopy lines, and grow in nature's classrooms.",
@@ -30,8 +30,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "AVASA Nature",
-    "url": "https://avasanature.com",
-    "logo": "https://avasanature.com/assets/logo.webp",
+    "url": "https://avasaexperiences.com",
+    "logo": "https://avasaexperiences.com/assets/logo.webp",
     "contactPoint": [
       {
         "@type": "ContactPoint",

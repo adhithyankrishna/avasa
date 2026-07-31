@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://avasanature.com/sitemap.xml",
+    sitemap: "https://avasaexperiences.com/sitemap.xml",
   };
 }
