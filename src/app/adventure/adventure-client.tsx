@@ -33,11 +33,11 @@ const FirstAidIcon = () => (
 );
 
 const GALLERY_PHOTOS = [
-  { id: "photo-1544551763-46a013bb70d5", title: "Cutting Spray", desc: "Kayaks slicing through the fast waters of Chaliyar." },
-  { id: "photo-1522163182402-834f871fd851", title: "Eagle's Flight Launch", desc: "Launching into India's longest canopy zipline." },
-  { id: "photo-1475113548554-5a36f1f523d6", title: "Bamboo Rafting", desc: "Cooperative navigation along ancient riverways." },
+  { id: "/assets/images/cutting_spray.jpg", title: "Cutting Spray", desc: "Kayaks slicing through the fast waters of Chaliyar." },
+  { id: "/assets/images/eagles_flight_launch.jpg", title: "Eagle's Flight Launch", desc: "Launching into India's longest canopy zipline." },
+  { id: "/assets/images/bamboo_rafting.jpg", title: "Bamboo Rafting", desc: "Cooperative navigation along ancient riverways." },
   { id: "photo-1501555088652-021faa106b9b", title: "Ridge Hiking", desc: "Trekking through early morning ridge lines in Munnar." },
-  { id: "photo-1533588841144-7486a55c13f9", title: "High Canopy Nets", desc: "Exploring suspended high-altitude rope net grids." },
+  { id: "/assets/images/high_canopy_nets.jpg", title: "High Canopy Nets", desc: "Exploring suspended high-altitude rope net grids." },
   { id: "photo-1471115853179-bb1d604434e0", title: "Base Camp Dusk", desc: "Settling into the forest clearing camp at golden hour." }
 ];
 
@@ -230,7 +230,7 @@ export default function Adventure() {
             <div key={idx} className="gallery-card">
               <div className="gallery-img">
                 <img 
-                  src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=500&q=80`} 
+                  src={photo.id.startsWith('/') ? photo.id : `https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=500&q=80`} 
                   alt={photo.title} 
                 />
               </div>
@@ -284,7 +284,7 @@ export default function Adventure() {
       <section className="closing-cta">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1600&q=80')" }}
+          style={{ backgroundImage: "url('/assets/images/eagles_flight_launch.jpg')" }}
         ></div>
         <div className="overlay"></div>
         <div className="content">

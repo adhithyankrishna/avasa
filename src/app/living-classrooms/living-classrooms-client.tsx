@@ -33,12 +33,12 @@ const CalendarIcon = () => (
 );
 
 const GALLERY_PHOTOS = [
-  { id: "photo-1522071820081-009f0129c71c", title: "Outdoor Discussion", desc: "A group sharing reflections under a canopy of trees." },
-  { id: "photo-1516259762381-22954d7d3ad2", title: "Forest Navigation", desc: "Learning orienteering and map skills in dense trails." },
+  { id: "/assets/images/outdoor_discussion.jpg", title: "Outdoor Discussion", desc: "A group sharing reflections under a canopy of trees." },
+  { id: "/assets/images/forest_navigation.jpg", title: "Forest Navigation", desc: "Learning orienteering and map skills in dense trails." },
   { id: "photo-1473448912268-2022ce9509d8", title: "Wilderness Habitat Study", desc: "Identifying species during an environmental science walk." },
   { id: "photo-1448375240586-882707db888b", title: "Canopy Observations", desc: "Exploring forest layers from safety-rigged platforms." },
   { id: "photo-1510312305653-8ed496efae75", title: "Campfire Debriefs", desc: "Reviewing team dynamics and leadership lessons around the fire." },
-  { id: "photo-1508873696983-2df519f0397e", title: "Survival Craft", desc: "Hands-on instruction in shelters and clean water sourcing." }
+  { id: "/assets/images/survival_craft.jpg", title: "Survival Craft", desc: "Hands-on instruction in shelters and clean water sourcing." }
 ];
 
 export default function LivingClassrooms() {
@@ -255,7 +255,7 @@ export default function LivingClassrooms() {
             <div key={idx} className="gallery-card">
               <div className="gallery-img">
                 <img 
-                  src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=500&q=80`} 
+                  src={photo.id.startsWith('/') ? photo.id : `https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=500&q=80`} 
                   alt={photo.title} 
                 />
               </div>
@@ -272,7 +272,7 @@ export default function LivingClassrooms() {
       <section className="closing-cta">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')" }}
+          style={{ backgroundImage: "url('/assets/images/outdoor_discussion.jpg')" }}
         ></div>
         <div className="overlay"></div>
         <div className="content">

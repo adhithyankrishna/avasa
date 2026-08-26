@@ -21,7 +21,8 @@ export default function Footer() {
           <Link href="/adventure">Adventure Activities</Link>
           <Link href="/habitat">Luxury Stays</Link>
           <Link href="/projects">B2B Services</Link>
-          <Link href="/how-we-care">Safety & Care</Link>
+          <Link href="/guides">Travel Guides</Link>
+          <Link href="/how-we-care">Safety &amp; Care</Link>
         </div>
         
         <div className="footer-col">

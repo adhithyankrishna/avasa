@@ -17,7 +17,7 @@ const PHOTO_IDS = [
   "photo-1504280390367-361c6d9f38f4", // Cozy glamping
   "photo-1448375240586-882707db888b", // Sunlit forest
   "photo-1526491109672-74740652b963", // Geodesic dome
-  "photo-1508873696983-2df519f0397e", // Guide checking ropes
+  "photo-1775806577969-660831c6b273", // Bushcraft shelter
   "photo-1464822759023-fed622ff2c3b", // Peak view
   "photo-1544551763-46a013bb70d5", // Kayak close up
   "photo-1434064511983-18c6dae20ed5", // Rising valley fog
@@ -37,8 +37,8 @@ const PHOTO_IDS = [
   "photo-1520250497591-112f2f40a3f4", // Treetop platform
   "photo-1530866495561-507c9faab2ed", // Canoe reflections
   "photo-1519681393784-d120267933ba", // Starry sky camp
-  "photo-1522071820081-009f0129c71c", // Forest classroom group
-  "photo-1516259762381-22954d7d3ad2", // Clearing trail
+  "photo-1770240090990-0653176ee415", // Forest classroom group
+  "photo-1645013283313-944128f03045", // Forest navigation map
   "photo-1501785888041-af3ef285b470", // Misty lake deck
   "photo-1472289065668-ce650ac443d2", // Mapping wood bark
   "photo-1471115853179-bb1d604434e0", // Sunset camp chair
@@ -57,6 +57,28 @@ export default function Homepage() {
   const router = useRouter();
 
   useEffect(() => {
+    // --- Passive Scroll Listener for Hero Section ---
+    const heroWrap = document.getElementById("hero-wrap");
+    const handleScroll = () => {
+      if (!heroWrap) return;
+      const rect = heroWrap.getBoundingClientRect();
+      const runwayHeight = rect.height;
+      const viewportHeight = window.innerHeight;
+      const maxScroll = runwayHeight - viewportHeight;
+
+      let progress = 0;
+      if (rect.top < 0) {
+        progress = Math.min(1, Math.max(0, -rect.top / maxScroll));
+      }
+      heroWrap.style.setProperty("--scroll", progress.toFixed(4));
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Trigger once on mount to handle initial scrolled state
+    handleScroll();
+
+
+
     const mouseMoveHandlers: { el: any; move: any; leave: any }[] = [];
     const mm = gsap.matchMedia(containerRef);
 
@@ -65,116 +87,6 @@ export default function Homepage() {
       isMobile: "(max-width: 900px)"
     }, (context) => {
       const { isDesktop, isMobile } = context.conditions as { isDesktop: boolean; isMobile: boolean };
-
-      // ----------------------------------------------------
-      // 1. Homepage Hero Parallax Timeline
-      // ----------------------------------------------------
-      const heroTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#hero-wrap",
-          start: "top top",
-          end: "bottom top",
-          scrub: true
-        }
-      });
-
-      if (isDesktop) {
-        heroTimeline.to("#hero-container .layer.hill-back", {
-          scale: 1.25,
-          y: "5%",
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.bridge-mid", {
-          scale: 1.3,
-          x: "15%",
-          y: "8%",
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.dome-tent", {
-          scale: 2.4,
-          x: "-35%",
-          y: "30%",
-          opacity: 0,
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .hero-content", {
-          y: "-100px",
-          opacity: 0,
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .hero-quick-nav", {
-          y: "80px",
-          opacity: 0,
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.mist-fog", {
-          opacity: 1,
-          scale: 1.8,
-          ease: "none"
-        }, 0.25);
-
-        heroTimeline.to("#hero-container .layer.vignette-overlay", {
-          opacity: 0,
-          ease: "none"
-        }, 0.4);
-      } else {
-        // Mobile simplified parallax (smooth and GPU friendly)
-        heroTimeline.to("#hero-container .layer.hill-back", {
-          scale: 1.1,
-          y: "2%",
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.bridge-mid", {
-          scale: 1.1,
-          x: "5%",
-          y: "3%",
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.dome-tent", {
-          scale: 1.25,
-          x: "-5%",
-          y: "5%",
-          opacity: 0,
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .hero-content", {
-          y: "-30px",
-          opacity: 0,
-          ease: "none"
-        }, 0);
-
-        heroTimeline.to("#hero-container .layer.mist-fog", {
-          opacity: 1,
-          scale: 1.3,
-          ease: "none"
-        }, 0.2);
-      }
-
-      // ----------------------------------------------------
-      // 2. Welcome Page Fade In
-      // ----------------------------------------------------
-      gsap.fromTo("#welcome p",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: "#welcome",
-            start: "top 75%",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
 
       // ----------------------------------------------------
       // 3. Unified Pillars Showcase
@@ -281,7 +193,7 @@ export default function Homepage() {
       }
 
       // ----------------------------------------------------
-      // 4. Vision Fade In
+      // 1. Vision Fade In
       // ----------------------------------------------------
       gsap.fromTo("#vision h2",
         { opacity: 0, y: 30 },
@@ -486,6 +398,7 @@ export default function Homepage() {
     });
 
     return () => {
+      window.removeEventListener("scroll", handleScroll);
       mm.revert();
       mouseMoveHandlers.forEach(({ el, move, leave }) => {
         if (el) {
@@ -514,68 +427,73 @@ export default function Homepage() {
 
   return (
     <div ref={containerRef}>
-      {/* Page 1 — Homepage Hero (3D layered parallax) */}
+      {/* Preload only the correct responsive assets based on device breakpoint */}
+      <link rel="preload" href="/images/hero/background-desktop.webp" as="image" media="(min-width: 769px)" />
+      <link rel="preload" href="/images/hero/background-mobile.webp" as="image" media="(max-width: 768px)" />
+      <link rel="preload" href="/images/hero/tent-frame-desktop.webp" as="image" media="(min-width: 769px)" />
+      <link rel="preload" href="/images/hero/tent-frame-mobile.webp" as="image" media="(max-width: 768px)" />
+
+      {/* Combined Scroll-Driven Hero and Welcome Section */}
       <div id="hero-wrap">
         <section id="hero-container">
-          <div className="layer hill-back"></div>
-          <div className="layer bridge-mid"></div>
-          <div className="layer mist-fog"></div>
-          <div className="layer dome-tent"></div>
-          <div className="layer vignette-overlay"></div>
+          {/* 1. Background scene */}
+          <div className="layer tent-hero__background"></div>
 
-          <div className="hero-content">
-            <h1 className="serif-title">Experiences &amp; Beyond</h1>
-            <p>Immersive &middot; Purposeful &middot; Transformative</p>
+          {/* 2. Tent frame */}
+          <div className="layer tent-hero__frame"></div>
+
+          {/* 3. Hero content */}
+          <div className="layer hero-content-layer">
+            <div className="hero-logo-box">
+              <h1 className="serif-title hero-main-title">
+                Experiences And Beyond
+              </h1>
+            </div>
+
+            {/* Bottom quick navigation bar */}
+            <div className="hero-quick-nav">
+              <div className="quick-nav-bar">
+                <Link href="/adventure" className="quick-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l4.03 3.359a.75.75 0 01.272.575v12.122a.75.75 0 01-.75.75h-3.75a.75.75 0 01-.75-.75v-3.75a.75.75 0 00-.75-.75H9.75a.75.75 0 00-.75.75v3.75a.75.75 0 01-.75.75H4.5a.75.75 0 01-.75-.75V8.397a.75.75 0 01.273-.575l4.029-3.36a1.125 1.125 0 01.608-.263v-.568c0-.621.504-1.125 1.125-1.125h1.125c.621 0 1.125.504 1.125 1.125z" />
+                  </svg>
+                  <span>Adventure</span>
+                </Link>
+                <Link href="/habitat" className="quick-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+                  <span>Stay</span>
+                </Link>
+                <Link href="/living-classrooms" className="quick-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 017.218 5.84c-.808.236-1.693.509-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                  </svg>
+                  <span>School</span>
+                </Link>
+                <Link href="/projects" className="quick-nav-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                  <span>Cooperate</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="scroll-cue">Scroll ↓</div>
           </div>
 
-          <div className="scroll-cue">Scroll ↓</div>
-
-          {/* Bottom quick navigation bar */}
-          <div className="hero-quick-nav">
-            <div className="quick-nav-bar">
-              <Link href="/adventure" className="quick-nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l4.03 3.359a.75.75 0 01.272.575v12.122a.75.75 0 01-.75.75h-3.75a.75.75 0 01-.75-.75v-3.75a.75.75 0 00-.75-.75H9.75a.75.75 0 00-.75.75v3.75a.75.75 0 01-.75.75H4.5a.75.75 0 01-.75-.75V8.397a.75.75 0 01.273-.575l4.029-3.36a1.125 1.125 0 01.608-.263v-.568c0-.621.504-1.125 1.125-1.125h1.125c.621 0 1.125.504 1.125 1.125z" />
-                </svg>
-                <span>Adventure</span>
-              </Link>
-              <Link href="/habitat" className="quick-nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                </svg>
-                <span>Stay</span>
-              </Link>
-              <Link href="/adventure" className="quick-nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 10.5h19.5M2.25 13.5h19.5m-16.5-9h13.5M3 19.5h18" />
-                </svg>
-                <span>Water</span>
-              </Link>
-              <Link href="/living-classrooms" className="quick-nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 017.218 5.84c-.808.236-1.693.509-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                </svg>
-                <span>School</span>
-              </Link>
-              <Link href="/projects" className="quick-nav-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                </svg>
-                <span>Cooperate</span>
-              </Link>
+          {/* 4. Welcome content layer */}
+          <div className="layer welcome-content-layer">
+            <div className="hw__welcome-content">
+              <span className="eyebrow">Experience &amp; Beyond</span>
+              <p>
+                Welcome to AVASA — where the world gets a little quieter, and life gives you real moments back.
+              </p>
             </div>
-            <div className="quick-nav-fade" />
           </div>
         </section>
       </div>
-
-      {/* Brand Statement / Welcome */}
-      <section id="welcome" className="section-pad">
-        <span className="eyebrow">Experience &amp; Beyond</span>
-        <p>
-          Welcome to AVASA — where the world gets a little quieter, and life gives you real moments back.
-        </p>
-      </section>
 
       {/* Unified Pillars Showcase (Sequential Background Blending & Floating Right Previews) */}
       <section id="pillars-showcase-pin">

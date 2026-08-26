@@ -3,10 +3,54 @@ import HomepageClient from "./home-client";
 
 export const metadata: Metadata = {
   title: "AVASA Nature | Premium Glamping & Adventure Experiences in Kerala",
-  description: "Experience premium outdoor stays, geodesic domes, and adventure activities in Wayanad, Kerala. Book ziplines, kayaking, and outdoor learning with AVASA Nature.",
+  description: "Premium glamping stays, India's longest zipline, and adventure camps in Wayanad, Kerala. Book tree tents, domes, and outdoor learning trips.",
 };
 
 export default function Page() {
+  const resortSchema = {
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "name": "AVASA Nature",
+    "description": "Premium glamping stays, India's longest zipline, and adventure camps in Wayanad, Kerala. Sleep in luxury tree tents, geodesic domes, and safari-style tipis.",
+    "telephone": "+91-6235-800-111",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Wayanad, Kerala, India",
+      "addressLocality": "Wayanad",
+      "addressRegion": "Kerala",
+      "postalCode": "673121",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 11.6854,
+      "longitude": 76.1320
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/avasa.experiences/",
+      "https://www.instagram.com/eagles__flight/",
+      "https://www.instagram.com/tipitribe/",
+      "https://www.instagram.com/stingraytribe/"
+    ]
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -56,6 +100,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(resortSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

@@ -9,31 +9,31 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://avasaexperiences.com"),
   title: "AVASA Nature | Premium Glamping & Adventure Experiences in Kerala",
   description:
-    "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
+    "Premium glamping stays, India's longest zipline, and adventure camps in Kerala. Sleep in luxury tree tents, domes, and learn outdoors.",
   verification: {
     google: "google47a5b5ff125c6b41",
   },
   openGraph: {
     title: "AVASA Nature | Premium Glamping & Adventure Experiences",
-    description: "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
+    description: "Premium glamping stays, India's longest zipline, and adventure camps in Kerala. Sleep in luxury tree tents, domes, and learn outdoors.",
     url: "https://avasaexperiences.com",
     siteName: "AVASA Nature",
     images: [
       {
-        url: "/assets/logo.webp",
-        width: 581,
-        height: 569,
-        alt: "AVASA Nature Logo",
+        url: "/assets/social-share.webp",
+        width: 1200,
+        height: 630,
+        alt: "AVASA Nature — Premium Glamping & Adventure Stays in Wayanad, Kerala",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "AVASA Nature | Premium Glamping & Adventure Experiences",
-    description: "AVASA Nature designs premium glamping stays and adventure experiences in Kerala. Sleep in luxury tree tents, fly on India's longest zipline, and learn outdoors.",
-    images: ["/assets/logo.webp"],
+    description: "Premium glamping stays, India's longest zipline, and adventure camps in Kerala. Sleep in luxury tree tents, domes, and learn outdoors.",
+    images: ["/assets/social-share.webp"],
   },
 };
 
@@ -69,7 +69,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth" >
       <head>
         <script
           type="application/ld+json"

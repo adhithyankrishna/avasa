@@ -8,12 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsapLib.registerPlugin(ScrollTrigger);
 
 const PORTFOLIO_PROJECTS = [
-  { id: "photo-1508873696983-2df519f0397e", title: "Chaliyar River Crossing Zipline", desc: "A 450-meter scenic zipline span over the Chaliyar river basin." },
-  { id: "photo-1542601906990-b4d3fb778b09", title: "Wayanad Tensile Canopy Village", desc: "Multi-level suspended tree netting and Stingray tree tent village." },
-  { id: "photo-1533588841144-7486a55c13f9", title: "Munnar Eco-Resort Obstacle Grid", desc: "A low-impact high-ropes and stability bridge challenge route." },
-  { id: "photo-1504917595217-d4dc5ebe6122", title: "High Altitude Belay Anchor Works", desc: "Rock face and old-growth pine anchors stress-tested for extreme loads." },
-  { id: "photo-1472289065668-ce650ac443d2", title: "Western Ghats Glamping master plan", desc: "Design and zoning for a low-impact canvas tipi retreat." },
-  { id: "photo-1486406146926-c627a92ad1ab", title: "Outdoor Learning Circle Structure", desc: "Amphitheater learning decks integrated into forest contours." }
+  { id: "photo-1522163182402-834f871fd851", title: "Chaliyar River Retreat Zipline", desc: "A 450-meter scenic dual-line crossing over the Chaliyar river basin. Built on an 8-acre eco-resort property. Features high-tensile steel anchors and terminal gravity-braking system." },
+  { id: "photo-1542601906990-b4d3fb778b09", title: "Vythiri Mist Resort Canopy Village", desc: "Multi-level suspended tree netting and Stingray tree tent village built on a 5.5-acre property in Wayanad. Integrates tree-safe felt wraps and UIAA-certified ratchet strap networks." },
+  { id: "photo-1533588841144-7486a55c13f9", title: "Munnar Tea Canopy Adventure Grid", desc: "A low-impact high-ropes and stability bridge challenge route built on a 12-acre resort. Includes 5 suspended geodesic dome platforms, canopy walkway bridges, and safety belay cables." },
+  { id: "photo-1504917595217-d4dc5ebe6122", title: "Western Ghats Adventure Park Belay Anchors", desc: "Rock face and old-growth pine anchor systems stress-tested up to 50kN for extreme load safety on a 15-acre active outdoor park." },
+  { id: "photo-1472289065668-ce650ac443d2", title: "Wayanad Tipi Tribe Retreat Master Plan", desc: "Complete eco-zoning, structural site layout, and installation of a 6-tipi glamping village with a central campfire circle on a 4-acre forested private estate." },
+  { id: "photo-1486406146926-c627a92ad1ab", title: "The Green Hills Academy Forest Amphitheater", desc: "A wooden outdoor classroom and forest learning deck integrated into hills contours on a 3.5-acre campus in Munnar. Includes stability practice ropes and low-height zipline nets." }
 ];
 
 export default function ProjectsAndConsulting() {
@@ -246,7 +246,7 @@ export default function ProjectsAndConsulting() {
       <section className="closing-cta">
         <div 
           className="bg" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&w=1600&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80')" }}
         ></div>
         <div className="overlay"></div>
         <div className="content">
