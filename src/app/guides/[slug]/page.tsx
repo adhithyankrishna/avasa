@@ -53,6 +53,7 @@ export default async function Page(props: PageProps) {
     "description": article.excerpt,
     "image": article.image,
     "datePublished": article.datePublished,
+    "dateModified": article.dateModified || article.datePublished,
     "author": {
       "@type": "Person",
       "name": article.author

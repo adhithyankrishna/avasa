@@ -66,7 +66,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
           style={{ 
             position: "absolute", 
             inset: 0, 
-            background: "linear-gradient(to bottom, rgba(11, 24, 48, 0.4) 0%, rgba(11, 24, 48, 0.85) 100%)",
+            background: "linear-gradient(to bottom, rgba(7, 38, 34, 0.4) 0%, rgba(7, 38, 34, 0.88) 100%)",
             pointerEvents: "none"
           }}
         ></div>
@@ -86,7 +86,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
               color: "var(--gold)", 
               fontSize: "11px", 
               textTransform: "uppercase", 
-              letterSpacing: "3px",
+              letterSpacing: "3px", 
               fontWeight: 600,
               display: "block",
               marginBottom: "16px"
@@ -110,7 +110,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
           <div 
             style={{ 
               fontSize: "13px", 
-              color: "rgba(237, 232, 220, 0.7)", 
+              color: "rgba(245, 238, 226, 0.7)", 
               fontFamily: "var(--sans-font)",
               letterSpacing: "1.5px",
               textTransform: "uppercase" 
@@ -137,7 +137,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
             margin: "0 auto",
             fontSize: "17.5px",
             lineHeight: "1.85",
-            color: "rgba(18, 35, 63, 0.9)"
+            color: "rgba(14, 67, 60, 0.9)"
           }}
           className="article-rich-text"
         >
@@ -146,7 +146,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
             <Link 
               href="/guides" 
               style={{ 
-                color: "var(--gold)", 
+                color: "var(--navy)", 
                 fontSize: "12px", 
                 textTransform: "uppercase", 
                 letterSpacing: "1.5px",
@@ -169,7 +169,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
             style={{ 
               marginTop: "60px", 
               paddingTop: "40px", 
-              borderTop: "1px solid rgba(18, 35, 63, 0.1)" 
+              borderTop: "1px solid rgba(14, 67, 60, 0.12)" 
             }}
           >
             <h4 
@@ -178,7 +178,7 @@ export default function ArticleClient({ article }: { article: GuideArticle }) {
                 fontSize: "12px", 
                 textTransform: "uppercase", 
                 letterSpacing: "2px", 
-                color: "var(--gold)",
+                color: "var(--navy)",
                 marginBottom: "20px"
               }}
             >

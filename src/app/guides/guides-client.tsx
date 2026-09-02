@@ -71,7 +71,7 @@ export default function GuidesClient() {
           <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, lineHeight: 1.6, marginBottom: "20px" }}>
             Wilderness wisdom, seasonal checklists, and destination insights.
           </p>
-          <p style={{ fontSize: "16px", lineHeight: "1.7", color: "rgba(18, 35, 63, 0.8)" }}>
+          <p style={{ fontSize: "16px", lineHeight: "1.7", color: "rgba(14, 67, 60, 0.85)" }}>
             Explore our curated articles designed to help you prepare for your stays, select the right outdoor programs, and discover all the adventures waiting for you in Wayanad and Munnar, Kerala.
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function GuidesClient() {
                 <span 
                   style={{ 
                     fontSize: "12px", 
-                    color: "rgba(237, 232, 220, 0.4)", 
+                    color: "rgba(245, 238, 226, 0.5)", 
                     marginBottom: "10px", 
                     display: "block" 
                   }}
@@ -174,7 +174,7 @@ export default function GuidesClient() {
                   style={{ 
                     fontSize: "14px", 
                     lineHeight: "1.6", 
-                    color: "rgba(237, 232, 220, 0.7)", 
+                    color: "rgba(245, 238, 226, 0.75)", 
                     marginBottom: "24px",
                     flexGrow: 1
                   }}

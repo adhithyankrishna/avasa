@@ -98,7 +98,7 @@ export default function ProjectsAndConsulting() {
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           AVASA is an end-to-end partner for landowners, eco-resorts, schools, and corporate campuses across India. We plan, engineer, and construct high-performance adventure and eco-tourism installations.
         </p>
-        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
           AVASA designs and builds adventure infrastructure — ziplines, tree tents, tree nets, and adventure parks — for resorts, schools, and tourism developments across India. We handle safety consulting, site design, and installation from planning to opening day.
         </p>
       </section>
@@ -146,7 +146,7 @@ export default function ProjectsAndConsulting() {
 
             <div className="offer-item">
               <h3>Safety Consulting &amp; Inspections</h3>
-              <p>Rigorous structural audits, anchor pull-testing, and gear certifications for existing parks. Learn more about <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>how we care for safety</Link>.</p>
+              <p>Rigorous structural audits, anchor pull-testing, and gear certifications for existing parks. Learn more about <Link href="/how-we-care" style={{ color: "var(--navy)", textDecoration: "underline" }}>how we care for safety</Link>.</p>
             </div>
 
             <div className="offer-item">

@@ -9,11 +9,12 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     // Check initial scroll or route
     const handleScroll = () => {
-      if (window.scrollY > 120) {
+      if (window.scrollY >= 220) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    
+
     // Trigger scroll check on mount in case page is already scrolled
     handleScroll();
 
@@ -37,7 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={scrolled ? "nav-scrolled" : "nav-transparent"}>
+      <nav className={`site-navbar ${isHome ? "is-home-nav" : ""} ${scrolled ? "nav-scrolled" : "nav-transparent"}`}>
         {/* Hamburger Menu Toggle (Mobile only) */}
         <button className="nav-menu-btn" aria-label="Toggle Menu" onClick={() => setMenuOpen(!menuOpen)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="nav-hamburger-svg">
@@ -54,8 +55,12 @@ export default function Navbar() {
           <Link href="/adventure">ADVENTURE ACTIVITIES</Link>
         </div>
 
-        {/* Centered Logo Link */}
-        <Link href="/" className="nav-logo-link">
+        {/* Centered Logo Link - Targeted by useScrollLogoTransition for dynamic landing coordinates */}
+        <Link
+          href="/"
+          id="nav-logo-target"
+          className={`nav-logo-link ${isHome && !scrolled ? "nav-logo-hidden" : ""}`}
+        >
           <Logo className="nav-logo" />
         </Link>
 

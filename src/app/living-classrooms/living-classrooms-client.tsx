@@ -141,7 +141,7 @@ export default function LivingClassrooms() {
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Living Classrooms moves growth out of the traditional school walls and directly into nature. We deliver custom experiential learning, leadership camps, and survival skill workshops tailored for schools, universities, and corporate teams.
         </p>
-        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
           AVASA runs outdoor learning programs for schools, colleges, and companies across Kerala. Programs include leadership camps, survival skills, and environmental education — all led outside a classroom, in real forests and open land. Transport and trained facilitators are included with every program.
         </p>
       </section>

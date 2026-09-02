@@ -147,21 +147,21 @@ export default function SchoolClient() {
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Safety Ratio</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Safety Ratio</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>1 Guide : 8 Students</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Duration</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Duration</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>2 - 5 Days</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Pricing Signal</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Pricing Signal</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>From ₹1,500 / student</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
               AVASA's Living Classrooms programs take learning outside the traditional four walls, placing students directly inside Kerala's natural ecosystems. Our programs are designed in partnership with experienced educators to combine physical adventure with curricular modules. Through hands-on activities, students explore forest biology, geography, and resource sustainability.
             </p>
@@ -175,36 +175,61 @@ export default function SchoolClient() {
       {/* Details & What's Included */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>The Program in Detail</h2>
+          <h2>Program Curriculum &amp; Modules</h2>
           <p>
-            An integrated program combining physical safety, structured lesson plans, and memorable wilderness experiences.
+            Every expedition combines structured curriculum modules with field-based challenges designed to instill environmental stewardship, self-confidence, and resilience.
           </p>
-          <div style={{ marginTop: "30px" }}>
-            <Link href="/living-classrooms" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to Living Classrooms main</Link>
-            <Link href="/living-classrooms/corporate-programs" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Check out Corporate programs &rarr;</Link>
-          </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Curricular Integration</h3>
-              <p>Practical forest field study modules addressing environmental science, geology, and biodiversity, mapping directly to ICSE, CBSE, and IB curriculums.</p>
+              <h3>Wilderness Navigation &amp; Orienteering</h3>
+              <p>Topographic map reading, compass bearings, GPS navigation, and trail pacing across varied terrain.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Wilderness Survival &amp; Bushcraft</h3>
-              <p>Students learn practical skills like shelter design, safety knotting, orienteering, clean firecraft, and water filtration protocols.</p>
+              <h3>Survival &amp; Bushcraft Skills</h3>
+              <p>Safe shelter construction, water purification techniques, basic cordage, and emergency firecraft.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Cooperative Team Runs</h3>
-              <p>Collaborative exercises including bamboo rafting, stability ropes courses, and navigation maps designed to build mutual trust and leadership.</p>
+              <h3>Forest Ecology &amp; Field Studies</h3>
+              <p>Flora/fauna identification, canopy study, stream bio-monitoring, and Western Ghats conservation science.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Full-Board Camping Setup</h3>
-              <p>Safe tent accommodations, healthy locally-cooked meals, and private, gender-segregated toilets staffed with round-the-clock safety coordinators.</p>
+              <h3>Low-Ropes &amp; Team Problem Solving</h3>
+              <p>Collaborative initiative games, spider web challenges, and trust-building exercises in the open forest.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics & What to Bring */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Logistics &amp; Preparation</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>What's Included</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Certified wilderness instructors &amp; WFA medics</li>
+                <li>All safety gear, helmets, harnesses (CE/UIAA)</li>
+                <li>Tent accommodation &amp; sleeping mats</li>
+                <li>Nutritious outdoor meal catering</li>
+                <li>Comprehensive risk assessment and parent briefing pack</li>
+              </ul>
+            </div>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>What Students Should Bring</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Sturdy trekking shoes or sneakers</li>
+                <li>Quick-dry clothing &amp; warm fleece for evenings</li>
+                <li>Rain poncho / waterproof jacket</li>
+                <li>Reusable water bottle &amp; headlamp/torch</li>
+                <li>Personal medication &amp; insect repellent</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -232,36 +257,35 @@ export default function SchoolClient() {
       </section>
 
       {/* Safety & Ratios */}
-      <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
+      <section className="pinned-split" style={{ background: "var(--navy-deep)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
-          <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Uncompromised Care</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
+          <h2 style={{ color: "var(--sand)" }}>Safety First. Always.</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.85)" }}>
             Our school programs follow strict risk mitigation strategies, maintaining the highest safety ratios and medical setups in the country. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
             <li className="safety-coda-item">
               <UserGroupIcon />
               <div>
                 <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>1:8 Guide-to-Student Ratio</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Small group structures ensure each student receives direct supervision and guidance during outdoor runs.</p>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Small group structures ensure each student receives direct supervision and guidance during outdoor runs.</p>
               </div>
             </li>
             <li className="safety-coda-item">
               <ShieldIcon />
               <div>
                 <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Wilderness First Aid Support</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every campsite features a fully stocked medical kit, oxygen support, and certified WFA instructors ready to act.</p>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Every campsite features a fully stocked medical kit, oxygen support, and certified WFA instructors ready to act.</p>
               </div>
             </li>
             <li className="safety-coda-item">
               <AcademicCapIcon />
               <div>
                 <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Risk Assessment Logs</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>We survey weather reports, trail conditions, and water levels daily, adapting schedules immediately for safety.</p>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>We survey weather reports, trail conditions, and water levels daily, adapting schedules immediately for safety.</p>
               </div>
             </li>
           </div>
@@ -279,7 +303,7 @@ export default function SchoolClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Programs are open to students from Grade 5 up to undergraduate level, with safety protocols, difficulty grades, and curriculum modules tailored to each age group.
               </div>
             )}
@@ -291,7 +315,7 @@ export default function SchoolClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Every program maintains a strict 1:8 guide-to-student safety ratio. Instructors are certified in wilderness first aid (WFA) and swiftwater rescue, and we use certified CE/UIAA safety gear.
               </div>
             )}
@@ -303,7 +327,7 @@ export default function SchoolClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, we run both on-campus challenge installations (ropes courses, climbing nets) and off-site expeditions at our Wayanad or Munnar base camps.
               </div>
             )}

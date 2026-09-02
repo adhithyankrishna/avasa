@@ -148,21 +148,21 @@ export default function TipisClient() {
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Stay Type</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Stay Type</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Canvas Tipi Stay</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Capacity</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Capacity</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Up to 4 Adults</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Pricing Signal</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Pricing Signal</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>From ₹3,500 / night</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
               Our tipi stay villages (known as the Tipi Tribe) are arranged in a circular format, fostering a sense of shared community and connection. Built using heavy local timber poles and thick, fire-retardant cotton canvas, these structures are rugged yet extremely inviting. 
             </p>
@@ -178,34 +178,63 @@ export default function TipisClient() {
         <div className="pinned-left">
           <h2>The Stay in Detail</h2>
           <p>
-            Traditional nomadic architecture built with modern weatherproofing and luxury outdoor layouts.
+            We merge wilderness adventure with soft organic stays, using low-impact structures that respect tree growth.
           </p>
           <div style={{ marginTop: "30px" }}>
-            <Link href="/habitat" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to stays main overview</Link>
-            <Link href="/habitat/domes" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Check out geodesic domes stays &rarr;</Link>
+            <Link href="/habitat" style={{ color: "var(--navy)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to stays main overview</Link>
+            <Link href="/habitat/tree-tents" style={{ color: "var(--navy)", textDecoration: "underline", display: "block" }}>Explore Suspended Tree Tents &rarr;</Link>
           </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Traditional Tipi Design</h3>
-              <p>Built with interlocked timber poles and thick 100% cotton canvas, providing a spacious cone shape with ample headroom and air flow.</p>
+              <h3>Traditional Pole-Supported Geometry</h3>
+              <p>Crafted using sustainable eucalyptus timber poles and heavy-duty 450 GSM canvas for high durability and natural charm.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Campfire &amp; Social Hearth</h3>
-              <p>Every tipi opens directly onto the communal campfire circle, featuring local wood firing, seating logs, and warm twilight dining.</p>
+              <h3>Central Hearth Community</h3>
+              <p>Arranged around an open-air central stone campfire with log seating, acoustic music nodes, and stargazing platforms.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Breathable Cotton Canvas</h3>
-              <p>Canvas is naturally breathable, preventing the humid green-house effect typical of synthetic tents, while double base ground-flaps keep out moisture.</p>
+              <h3>Custom Interior Furnishings</h3>
+              <p>Fitted with hand-knotted dhurries, low wooden bedding platforms, organic cotton bolsters, and ambient copper hurricane lamps.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Shared Premium Washrooms</h3>
-              <p>Access to our clean, high-design central bath lodge offering hot showers, low-flow fixtures, and organic hand soaps.</p>
+              <h3>Base Camp Lodge Support</h3>
+              <p>Full access to clean eco-showers, luggage lockers, device charging stations, and hot local buffet meals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics & What's Included */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Stay Amenities &amp; Guidelines</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Included with Your Stay</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Comfortable bedding platforms with organic cotton linens</li>
+                <li>Traditional Kerala home-style dinner and breakfast</li>
+                <li>Night campfire gathering with hot spiced tea</li>
+                <li>Modern eco-washrooms with hot water facilities</li>
+                <li>Resident campsite host and overnight security</li>
+              </ul>
+            </div>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Good to Know</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Check-in: 2:00 PM / Check-out: 11:00 AM</li>
+                <li>Capacity: Up to 4 adults per tipi unit</li>
+                <li>Natural ventilation with top draft smoke flaps</li>
+                <li>Lanterns provided; power outlets available in base lodge</li>
+                <li>Open flame strictly prohibited inside sleeping tipis</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -213,14 +242,14 @@ export default function TipisClient() {
 
       {/* Gallery Section */}
       <section className="gallery-section">
-        <h2>Caught in the Tribe</h2>
+        <h2>Tipi Tribe Moments</h2>
         <div className="gallery-grid">
           {GALLERY_PHOTOS.map((photo, idx) => (
             <div key={idx} className="gallery-card">
               <div className="gallery-img">
                 <img 
                   src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=600&q=80`} 
-                  alt={`Canvas tipi stay Wayanad glamping experience — ${photo.title}`} 
+                  alt={`Tipi glamping Wayanad campfire stay experience — ${photo.title}`} 
                 />
               </div>
               <div className="gallery-info">
@@ -236,33 +265,33 @@ export default function TipisClient() {
       <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
           <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Tipi Stability</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
-            Our tipis are anchored into forest soils using high-tensile ground stakes and heavy marine-grade ropes, ensuring safe structures. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
+          <h2 style={{ color: "var(--sand)" }}>Crafted for Natural Safety</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.75)" }}>
+            Our tipis use fire-retardant treated canvas and deep earth anchors, creating a safe, weather-sealed sanctuary. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
-            <li className="safety-coda-item">
-              <CampfireIcon />
-              <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Fire-Safe Treatments</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every canvas panel is treated with high-grade fire-retardant overlays and matches standard outdoor safety codes.</p>
-              </div>
-            </li>
-            <li className="safety-coda-item">
-              <SunIcon />
-              <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Chimney Air Flow</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Adjustable smoke-flaps at the top vent can be angled to block rain while maintaining continuous thermal circulation.</p>
-              </div>
-            </li>
             <li className="safety-coda-item">
               <ShieldIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Sturdy Pole Lacing</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Rigged using interlocked eucalyptus timber logs fastened with high-tension wire cords and anchored to deep ground stakes.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Fire-Treated Canvas Shells</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Every canvas panel is treated with non-toxic, eco-friendly fire-retardant solution tested to high safety norms.</p>
+              </div>
+            </li>
+            <li className="safety-coda-item">
+              <CheckCircleIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Deep Earth Pegging</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Heavy steel stakes driven 45cm into dense ground securely anchor all guy-lines against monsoon gusts.</p>
+              </div>
+            </li>
+            <li className="safety-coda-item">
+              <SparklesIcon />
+              <div>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Natural Draft Ventilation</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Vented top cowls continuously exhaust warm air, maintaining optimal oxygen flow and zero stuffiness.</p>
               </div>
             </li>
           </div>
@@ -280,7 +309,7 @@ export default function TipisClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Our tipis are constructed with steep-sloped walls that easily shed heavy monsoon rains, and are fitted with double-layered marine-grade ground flaps sealed at the base to keep interiors completely dry.
               </div>
             )}
@@ -292,7 +321,7 @@ export default function TipisClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 No, natural cotton-canvas is highly breathable. The tipi design includes adjustable top smoke flaps and bottom vents, creating a natural chimney effect that constantly cycles cool air.
               </div>
             )}
@@ -304,7 +333,7 @@ export default function TipisClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 For safety reasons, open fires are strictly prohibited inside the tipis. However, each tipi has direct access to our central, guided communal campfire circle located safely just steps away.
               </div>
             )}

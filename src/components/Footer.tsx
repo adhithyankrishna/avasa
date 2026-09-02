@@ -40,7 +40,7 @@ export default function Footer() {
           <a href="https://www.instagram.com/eagles__flight/" target="_blank" rel="noopener noreferrer">@eagles__flight</a>
           <div className="social-sub-links" style={{ display: "flex", gap: "8px", flexWrap: "wrap", alignItems: "center" }}>
             <a href="https://www.instagram.com/tipitribe/" target="_blank" rel="noopener noreferrer" style={{ margin: 0 }}>@tipitribe</a>
-            <span style={{ color: "rgba(237, 232, 220, 0.4)" }}>·</span>
+            <span style={{ color: "rgba(245, 238, 226, 0.4)" }}>·</span>
             <a href="https://www.instagram.com/stingraytribe/" target="_blank" rel="noopener noreferrer" style={{ margin: 0 }}>@stingraytribe</a>
           </div>
         </div>

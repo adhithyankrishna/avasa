@@ -147,21 +147,21 @@ export default function DomesClient() {
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Stay Type</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Stay Type</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Geodesic Glamping Dome</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Capacity</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Capacity</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Up to 2 Adults</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Pricing Signal</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Pricing Signal</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>From ₹5,500 / night</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
               Our luxury geodesic domes represent the pinnacle of eco-tourism architecture. Nestled securely in private pockets of the Wayanad rainforest, these structures offer an insulated double-walled microclimate. The large, transparent bay window gives you a front-row view of the forest floor, valleys, and early morning mist rolls.
             </p>
@@ -177,34 +177,63 @@ export default function DomesClient() {
         <div className="pinned-left">
           <h2>The Stay in Detail</h2>
           <p>
-            An architectural masterpiece designed to sit lightly on the earth while providing elite insulation and security.
+            We merge wilderness adventure with soft organic stays, using low-impact structures that respect tree growth.
           </p>
           <div style={{ marginTop: "30px" }}>
-            <Link href="/habitat" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to stays main overview</Link>
-            <Link href="/habitat/tree-tents" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Check out suspended tree tents &rarr;</Link>
+            <Link href="/habitat" style={{ color: "var(--navy)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to stays main overview</Link>
+            <Link href="/habitat/tipis" style={{ color: "var(--navy)", textDecoration: "underline", display: "block" }}>Explore Nordic Tipis &rarr;</Link>
           </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Geodesic Frame &amp; Foundation</h3>
-              <p>Constructed with interlocked structural steel tubing and anchored on elevated heavy timber piling, ensuring absolute stability against high winds and ground moisture.</p>
+              <h3>Insulated Geodesic Framework</h3>
+              <p>Constructed with galvanized steel triangular struts and multi-layer thermal insulation to maintain a comfortable temperature year-round.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Climate Control &amp; Insulation</h3>
-              <p>Fitted with specialized multi-layered thermo-insulation shells, silent cooling units, and solar ventilation systems to keep inside fresh and comfortable.</p>
+              <h3>Panoramic Bay Window</h3>
+              <p>A massive curved front viewing panel offering uninterrupted 180-degree sightlines into the misty rainforest canopy and star-filled skies.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Attached Luxury Bathroom</h3>
-              <p>Features an en-suite eco-bathroom with running hot water, low-flush systems, premium towels, and organic bath amenities.</p>
+              <h3>En-Suite Eco Bathroom</h3>
+              <p>Private attached washroom with solar-heated shower, ceramic plumbing fixtures, and locally-sourced organic toiletries.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Blackout curtain privacy</h3>
-              <p>Designed with high-density blackout curtains mapped precisely to the dome front window structure, letting you choose between panoramic wilderness or full privacy.</p>
+              <h3>Private Cantilever Deck</h3>
+              <p>Step out onto a teak-finished deck with lounge chairs and coffee table, floating out over the sloped terrain for supreme privacy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics & What's Included */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Stay Amenities &amp; Guidelines</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Included with Your Stay</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>King-size luxury bed &amp; premium linens</li>
+                <li>Full-board farm-fresh Kerala dining</li>
+                <li>Private en-suite with hot water &amp; toiletries</li>
+                <li>High-speed Wi-Fi and USB power docks</li>
+                <li>Guided morning nature walk and evening campfire</li>
+              </ul>
+            </div>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Good to Know</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Check-in: 2:00 PM / Check-out: 11:00 AM</li>
+                <li>Maximum occupancy: 2 adults + 1 child</li>
+                <li>100% solar and silent battery backup</li>
+                <li>Curtains provided for complete window privacy</li>
+                <li>No loud music permitted after 10:00 PM</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -212,14 +241,14 @@ export default function DomesClient() {
 
       {/* Gallery Section */}
       <section className="gallery-section">
-        <h2>Caught in the Dome</h2>
+        <h2>Dome Living in Wayanad</h2>
         <div className="gallery-grid">
           {GALLERY_PHOTOS.map((photo, idx) => (
             <div key={idx} className="gallery-card">
               <div className="gallery-img">
                 <img 
                   src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=600&q=80`} 
-                  alt={`Geodesic dome stay Wayanad glamping experience — ${photo.title}`} 
+                  alt={`Geodesic dome glamping Kerala luxury stay — ${photo.title}`} 
                 />
               </div>
               <div className="gallery-info">
@@ -231,37 +260,37 @@ export default function DomesClient() {
         </div>
       </section>
 
-      {/* Safety & Engineering */}
+      {/* Safety & Rigging */}
       <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
-          <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Wind-Load Engineering</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
-            Our geodesic domes are engineered to distribute external wind loads evenly across the geometric shell structure, providing the safest architectural stay available in the Ghats. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
+          <span className="eyebrow">Safety &amp; Architecture</span>
+          <h2 style={{ color: "var(--sand)" }}>Engineered for Total Comfort</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.75)" }}>
+            Our geodesic domes are engineered to withstand the extreme monsoon conditions of the Western Ghats while leaving zero permanent footprint on the soil. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
             <li className="safety-coda-item">
-              <BoltIcon />
+              <HomeIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>High wind-load ratings</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>The interlinked triangles distribute stress evenly, rated to easily withstand heavy monsoon winds up to 120 km/h.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Steel Geodesic Lattice</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>The triangular truss design distributes wind and rain loads uniformly, creating unmatched structural stability.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <SunIcon />
+              <EyeIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Solar exhaust ventilation</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Fitted with automated smart vents that circulate air constantly, preventing humidity build-up and condensation inside the shell.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>UV-Treated Membrane</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Flame-retardant, anti-mildew, and UV-stabilized PVC outer covers keep the interior dry and fresh year-round.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <ShieldIcon />
+              <SparklesIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Robust Piled Anchoring</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Anchored on deep concrete piles and structural steel pillars to prevent slide risks during Western Ghats monsoons.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Elevated Post Foundations</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Decks sit on localized post piers, allowing natural rainwater runoff and animal pathways underneath.</p>
               </div>
             </li>
           </div>
@@ -279,7 +308,7 @@ export default function DomesClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, our luxury geodesic domes feature full insulation layers, solar-powered exhaust vents, and silent climate control systems to stay cool during the day and warm at night.
               </div>
             )}
@@ -291,7 +320,7 @@ export default function DomesClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Every dome features an attached, private en-suite bathroom with eco-friendly hot showers, organic toiletries, a private viewing deck, and premium coffee setups.
               </div>
             )}
@@ -303,7 +332,7 @@ export default function DomesClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, the geodesic shape is structurally the most robust shape for high winds, and our domes are built using marine-grade PVC shells and steel frames anchored on heavy piling.
               </div>
             )}

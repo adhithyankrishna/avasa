@@ -2,17 +2,17 @@ import { Metadata } from "next";
 import ZiplineClient from "./zipline-client";
 
 export const metadata: Metadata = {
-  title: "Eagle's Flight Zipline — Wayanad's Longest Canopy Zipline | AVASA Nature",
-  description: "Fly high on Eagle's Flight, India's longest canopy zipline in Wayanad, Kerala. Experience double-redundant certified safety lines and professional guides.",
+  title: "Eagle's Flight — India's Longest Zipline, 1.8 Kilometers | AVASA Nature",
+  description: "Fly Eagle's Flight, India's longest zipline at 1.8 kilometers, soaring up to 250 meters above the tea valleys of the Western Ghats. Includes a 4x4 jeep ascent to the launch platform.",
 };
 
 export default function Page() {
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Eagle's Flight Zipline Wayanad",
+    "name": "Eagle's Flight Zipline",
     "image": "https://avasaexperiences.com/assets/images/adventure_hero.webp",
-    "description": "Eagle's Flight is one of the longest canopy ziplines in India, flying high above the rainforest canopy in Wayanad, Kerala.",
+    "description": "Eagle's Flight is India's longest zipline, a 1.8-kilometer glide up to 250 meters above the tea valleys of the Western Ghats, reaching speeds of 50-70 km/h. Includes a 7km 4x4 jeep ascent to the launch platform.",
     "brand": {
       "@type": "Brand",
       "name": "AVASA Nature"
@@ -21,7 +21,7 @@ export default function Page() {
       "@type": "Offer",
       "url": "https://avasaexperiences.com/adventure/eagles-flight-zipline",
       "priceCurrency": "INR",
-      "price": "1200",
+      "price": "3999",
       "priceValidUntil": "2027-12-31",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
@@ -37,7 +37,7 @@ export default function Page() {
         "name": "How long is the Eagle's Flight zipline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Eagle's Flight is India's longest canopy zipline, stretching over 450 meters across the lush rainforest canopy of Wayanad."
+          "text": "Eagle's Flight is India's longest zipline, stretching 1.8 kilometers across the tea valleys of the Western Ghats, with riders reaching heights of up to 250 meters above the ground."
         }
       },
       {

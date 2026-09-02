@@ -147,21 +147,21 @@ export default function CorporateClient() {
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Group Size</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Group Size</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>15 - 100 Pax</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Focus</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Focus</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Trust &amp; Leadership</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Pricing Signal</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Pricing Signal</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>From ₹3,000 / person</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
               AVASA's corporate offsites shift team dynamics from passive slide presentations to active, hands-on cooperation in wild landscapes. Guided by professional leadership coaches and wilderness experts, our programs build trust, align team goals, and stimulate organic problem solving.
             </p>
@@ -172,7 +172,6 @@ export default function CorporateClient() {
         </div>
       </section>
 
-      {/* Details & What's Included */}
       <section className="pinned-split">
         <div className="pinned-left">
           <h2>The Offsite in Detail</h2>
@@ -180,37 +179,64 @@ export default function CorporateClient() {
             We merge premium nature hospitality with structured outdoor leadership training to create lasting team cohesion.
           </p>
           <div style={{ marginTop: "30px" }}>
-            <Link href="/living-classrooms" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to Living Classrooms main</Link>
-            <Link href="/projects" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Explore B2B build services &rarr;</Link>
+            <Link href="/living-classrooms" style={{ color: "var(--navy)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to Living Classrooms main</Link>
+            <Link href="/living-classrooms/school-programs" style={{ color: "var(--navy)", textDecoration: "underline", display: "block" }}>Check out School programs &rarr;</Link>
           </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Facilitated Leadership Debriefs</h3>
-              <p>Programs are structured to translate outdoor challenges into clear office metaphors: communication under pressure, resource allocation, and agile planning.</p>
+              <h3>Custom Leadership Challenges</h3>
+              <p>Experiential outdoor exercises structured to assess and improve high-stress decision making, resource allocation, and strategic pivots.</p>
             </div>
             
             <div className="offer-item">
-              <h3>High-Adventure Runs</h3>
-              <p>Teams take on India's longest canopy zipline (Eagle's Flight), rapid river kayaking, and steep ridge hikes to stretch personal zones safely.</p>
+              <h3>Wilderness Survival Workshops</h3>
+              <p>Practical workshops in survival tactics, firecraft, navigation, and campcraft that push participants outside their everyday comfort zones.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Custom Glamping Retreats</h3>
-              <p>Accommodations in our premium geodesic domes, suspended tree tents, and tipis, offering full comfort amidst wilderness privacy.</p>
+              <h3>Adventure High-Ropes &amp; Rafting</h3>
+              <p>High-energy river crossing, zip-riding, and canopy navigation to forge shared memories and break down corporate organizational hierarchies.</p>
             </div>
 
             <div className="offer-item">
-              <h3>End-to-End Coordination</h3>
-              <p>We coordinate secure transport, custom local dining menus, meeting spaces in the woods, and complete safety support.</p>
+              <h3>Full-Service Hospitality</h3>
+              <p>Deluxe tent/dome lodging, organic barbecue catering, campfire gatherings, and high-speed satellite Wi-Fi nodes for remote work slots.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Offsite Planning &amp; Customization</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>What We Deliver</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Customized event schedules &amp; leadership debriefs</li>
+                <li>Certified wilderness instructors &amp; event managers</li>
+                <li>Premium dome / tent accommodation with power</li>
+                <li>Farm-to-table dining &amp; evening campfire barbecue</li>
+                <li>Comprehensive risk mitigation &amp; medical coverage</li>
+              </ul>
+            </div>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Customization Options</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Dedicated workshop pavilions with AV setup</li>
+                <li>Extended multi-day trekking or river expeditions</li>
+                <li>Custom keynote facilitators or leadership speakers</li>
+                <li>Branded participant kits &amp; merchandise</li>
+                <li>Private transport shuttles from Kozhikode / Kochi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="gallery-section">
         <h2>Teams in Action</h2>
         <div className="gallery-grid">
@@ -231,44 +257,42 @@ export default function CorporateClient() {
         </div>
       </section>
 
-      {/* Safety & Standards */}
       <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
           <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Safety Assurance</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
-            Our corporate runs maintain absolute insurance and safety parameters, keeping your team completely secure at all heights and water levels. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
+          <h2 style={{ color: "var(--sand)" }}>Enterprise-Grade Safety</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.75)" }}>
+            We prioritize guest safety above all else. Every corporate program is led by certified professionals adhering to international adventure standards. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
             <li className="safety-coda-item">
-              <TrophyIcon />
+              <ShieldIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified Safety Gear</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every activity uses CE/UIAA certified harnesses, climbing lines, helmets, and swiftwater flotation jackets.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified Safety Instructors</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>All activity guides are certified in wilderness first aid and technical rope management.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <ShieldIcon />
+              <CheckCircleIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Wilderness Rescue Guides</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>All activities are led by trained instructors certified in swiftwater rescue and high-altitude belay work.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Medical Evacuation Protocols</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Every site maintains emergency 4x4 vehicles, on-call doctors, and mapped evacuation routes.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <UserGroupIcon />
+              <BuildingOfficeIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Continuous Risk Checks</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>We monitor weather, path conditions, and water discharge rates daily, adapting schedules to protect your group.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Enterprise Liability Coverage</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Comprehensive corporate insurance and safety audits for every retreat location.</p>
               </div>
             </li>
           </div>
         </div>
       </section>
 
-      {/* Specific FAQ Accordion Section */}
       <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <h2 style={{ textAlign: "center", marginBottom: "40px", color: "var(--navy)" }}>Corporate Programs FAQs</h2>
         <div className="faq-container" style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -279,7 +303,7 @@ export default function CorporateClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 We cater to corporate groups ranging from 15 to 100 participants, offering full-board stays, custom conference nodes, and coordinated activities.
               </div>
             )}
@@ -291,7 +315,7 @@ export default function CorporateClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Our activities include forest ropes grids, swiftwater kayaking, bamboo raft-building, wilderness navigation, survival bushcraft, and campfire leadership reflection sessions.
               </div>
             )}
@@ -303,7 +327,7 @@ export default function CorporateClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, all programs are customized. We adjust difficulty grades, activity lists, stay setups (domes, tents, tipis), and local menu designs to fit your corporate goals.
               </div>
             )}
@@ -312,7 +336,6 @@ export default function CorporateClient() {
         </div>
       </section>
 
-      {/* Closing CTA */}
       <section className="closing-cta">
         <div 
           className="bg" 

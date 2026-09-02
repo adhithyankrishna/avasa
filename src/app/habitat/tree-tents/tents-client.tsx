@@ -147,21 +147,21 @@ export default function TentsClient() {
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Stay Type</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Stay Type</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Suspended Tree Tent</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Capacity</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Capacity</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Up to 3 Adults</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Pricing Signal</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Pricing Signal</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>From ₹2,500 / night</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
               Our luxury tree tents (modeled on Stingray tensile systems) are rigged between three strong, old-growth forest trunks, floating gracefully above the lush rainforest floor of Wayanad, Kerala. Here, the floor is literally a soft, tensioned trampoline structure that supports you perfectly while giving you the sensation of weightless floating.
             </p>
@@ -172,7 +172,6 @@ export default function TentsClient() {
         </div>
       </section>
 
-      {/* Details & What's Included */}
       <section className="pinned-split">
         <div className="pinned-left">
           <h2>The Stay in Detail</h2>
@@ -180,95 +179,133 @@ export default function TentsClient() {
             We merge wilderness adventure with soft organic stays, using low-impact structures that respect tree growth.
           </p>
           <div style={{ marginTop: "30px" }}>
-            <Link href="/habitat" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to stays main overview</Link>
-            <Link href="/adventure/eagles-flight-zipline" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Experience Eagle's Flight Zipline &rarr;</Link>
+            <Link href="/habitat" style={{ color: "var(--navy)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to Habitat main</Link>
+            <Link href="/habitat/domes" style={{ color: "var(--navy)", textDecoration: "underline", display: "block" }}>Explore Geodesic Domes &rarr;</Link>
           </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Tensile Suspension</h3>
-              <p>Designed using heavy-duty webbing straps and tree-safe padding, creating a rock-solid, comfortable platform suspended 4 to 8 feet above the forest floor.</p>
+              <h3>Triple-Point Tensile Suspension</h3>
+              <p>Engineered using tree-wrap straps and high-load ratchets to suspend the tent securely without piercing or damaging the tree bark.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Double-Layer Protection</h3>
-              <p>Features an ultra-fine insect mesh inner canopy for stargazing on clear nights, and a heavy-duty waterproof rainfly to stay cozy during Kerala's monsoons.</p>
+              <h3>360-Degree Canopy Views</h3>
+              <p>Unobstructed panoramic forest vistas from canopy height, with rollable rainfly flaps and insect-proof micro-mesh panels.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Outdoor Cozy Setup</h3>
-              <p>Equipped with premium sleeping mats, micro-fiber pillows, insulated sleeping bags, and rechargeable forest lanterns for cozy lighting.</p>
+              <h3>Private Ground Lounge &amp; Firepit</h3>
+              <p>Each tree tent site includes a private forest floor clearing with outdoor seating, a hammock deck, and a dedicated campfire ring.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Base Camp Access</h3>
-              <p>Located near our base lodge, offering clean washrooms, charging docks, locally-sourced dining, and guided forest tours.</p>
+              <h3>Base Camp Amenities</h3>
+              <p>Access to modern eco-washrooms with hot water, charging lockers, luggage storage, and our organic farm dining pavilion.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="gallery-section">
-        <h2>Caught in the Canopy</h2>
-        <div className="gallery-grid">
-          {GALLERY_PHOTOS.map((photo, idx) => (
-            <div key={idx} className="gallery-card">
-              <div className="gallery-img">
-                <img 
-                  src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=600&q=80`} 
-                  alt={`Guest enjoying tree tent stay Wayanad glamping experience — ${photo.title}`} 
-                />
-              </div>
-              <div className="gallery-info">
-                <h4>{photo.title}</h4>
-                <p>{photo.desc}</p>
-              </div>
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Stay Amenities &amp; Guidelines</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Included with Your Stay</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Sleeping mats, thermal sleeping bags &amp; pillows</li>
+                <li>Traditional Kerala breakfast &amp; dinner buffet</li>
+                <li>Evening campfire &amp; guided night forest walk</li>
+                <li>Eco-washroom access with hot showers</li>
+                <li>Dedicated site caretaker &amp; safety briefing</li>
+              </ul>
             </div>
-          ))}
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>Good to Know</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Check-in: 2:00 PM / Check-out: 11:00 AM</li>
+                <li>Weight limit: 400 kg combined capacity</li>
+                <li>Access via webbing rope ladder with safety assist</li>
+                <li>Carry headlamp, warm layers &amp; power bank</li>
+                <li>Alcohol &amp; smoking prohibited in tents</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Safety & Rigging */}
+      <section className="gallery-section">
+        <h2>Canopy Living Moments</h2>
+        <div className="gallery-grid">
+          <div className="gallery-card visible">
+            <div className="gallery-img">
+              <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=600&q=80" alt="Tree tent suspension in forest" />
+            </div>
+            <div className="gallery-info">
+              <h4>Suspended Serenity</h4>
+              <p>Wake up floating among morning mist and forest birds.</p>
+            </div>
+          </div>
+          <div className="gallery-card visible">
+            <div className="gallery-img">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Canopy foliage and tree trunks" />
+            </div>
+            <div className="gallery-info">
+              <h4>Ancient Forest Setting</h4>
+              <p>Rigged only on certified, healthy mature trees.</p>
+            </div>
+          </div>
+          <div className="gallery-card visible">
+            <div className="gallery-img">
+              <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=600&q=80" alt="Evening glamping campfire" />
+            </div>
+            <div className="gallery-info">
+              <h4>Campfire Evenings</h4>
+              <p>Gather around the warm hearth under clear night skies.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
-          <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Tree-Safe Rigging</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
-            Our tree tents are rigged with zero-impact hardware that protects bark and trunk structures from damage. Load calculations are verified daily. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
+          <span className="eyebrow">Safety &amp; Rigging</span>
+          <h2 style={{ color: "var(--sand)" }}>Engineered for Total Trust</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.75)" }}>
+            Every tree tent installation is planned by certified arborists and rigged using CE-rated climbing gear. We test tension points before every check-in. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
             <li className="safety-coda-item">
-              <TreeIcon />
+              <ShieldIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Zero-Impact Tree Protection</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>We use wide felt-lined wraps under our straps to ensure tree sap flows naturally and bark is never scraped.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified Tree Selection</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Every tree is surveyed by arborists for trunk diameter, root health, and load-bearing strength.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <RopeIcon />
+              <SparklesIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>High-Tension Rigging</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Rigged using heavy-duty CE-certified ratchets capable of holding 2.5 metric tons, verified by certified guides.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Tree-Protection Webbing</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Wide protective pads distribute load evenly across bark, leaving zero scars on living trees.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <ShieldIcon />
+              <CheckCircleIcon style={{ width: "24px", height: "24px", color: "var(--gold)" }} />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Triple Anchor Redundancy</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Each tent relies on three independent trees as anchor support, eliminating single-point failure risks completely.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Daily Tension Audits</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Ratchet lines and anchor points are inspected and re-calibrated prior to every guest arrival.</p>
               </div>
             </li>
           </div>
         </div>
       </section>
 
-      {/* Specific FAQ Accordion Section */}
       <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <h2 style={{ textAlign: "center", marginBottom: "40px", color: "var(--navy)" }}>Tree Tents Stays FAQs</h2>
         <div className="faq-container" style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -279,7 +316,7 @@ export default function TentsClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Tents are equipped with roll-up floor hatches and drop-down safety web ladders or custom steps. Guests can climb in and out easily and safely.
               </div>
             )}
@@ -291,7 +328,7 @@ export default function TentsClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, our tree tents are tensioned using high-strength industrial ratchets and tree-protection webbing to three separate anchors, keeping it level and stable.
               </div>
             )}
@@ -303,7 +340,7 @@ export default function TentsClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Yes, the tents feature a heavy-duty insect mesh inner layer and an overlapping waterproof double-layered rainfly that keeps you completely dry during Wayanad's showers.
               </div>
             )}
@@ -312,7 +349,6 @@ export default function TentsClient() {
         </div>
       </section>
 
-      {/* Closing CTA */}
       <section className="closing-cta">
         <div 
           className="bg" 

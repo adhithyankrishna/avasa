@@ -148,7 +148,7 @@ export default function Adventure() {
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Thrills planned with precision. We curate high-adrenaline expeditions and activities for individuals, active families, and corporate squads seeking genuine adventure.
         </p>
-        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
           Looking for adventure activities in Kerala? AVASA runs zipline rides, kayaking trips, and guided treks across Wayanad, Munnar, and the Chaliyar river. Our most popular activity is Eagle's Flight, one of the longest ziplines in India. Every activity includes safety gear, a trained guide, and support from start to finish.
         </p>
       </section>

@@ -138,7 +138,7 @@ export default function Habitat() {
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
           Habitat replaces traditional hotel stays with low-impact, design-forward structures. Experience a deep, immersive stay directly inside the canopy without leaving comfort behind.
         </p>
-        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(18, 35, 63, 0.8)" }}>
+        <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
           Want a glamping stay in Kerala? Choose from tree tents, glass domes, or tipi camps at AVASA's Stingray Tribe and Tipi Tribe locations. Each stay includes meals, guide support, and a comfortable setup close to nature — without giving up basic comforts.
         </p>
       </section>

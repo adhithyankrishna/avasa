@@ -5,6 +5,7 @@ export interface GuideArticle {
   content: string; // HTML or markdown content
   author: string;
   datePublished: string;
+  dateModified?: string;
   readingTime: string;
   category: string;
   image: string;
@@ -14,42 +15,43 @@ export interface GuideArticle {
 export const GUIDE_ARTICLES: GuideArticle[] = [
   {
     slug: "longest-zipline-wayanad-eagles-flight",
-    title: "The Longest Zipline in Wayanad: Everything You Need to Know About Eagle's Flight",
-    excerpt: "Discover the thrills of soaring 150 feet above the forest canopy. Our complete guide covers safety, length, and what makes Eagle's Flight the ultimate Wayanad zipline experience.",
+    title: "Eagle's Flight: Everything You Need to Know About India's Longest Zipline",
+    excerpt: "Discover the thrills of soaring up to 250 meters above the tea valleys of the Western Ghats. Our complete guide covers safety, length, and what makes Eagle's Flight India's longest zipline experience.",
     author: "Aditya Kiran, Head of Adventure",
     datePublished: "2026-06-15",
+    dateModified: "2026-08-29",
     readingTime: "5 min read",
     category: "Adventure",
     image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80",
-    keywords: ["zipline Wayanad", "longest zipline India", "Eagle's Flight zipline"],
+    keywords: ["longest zipline India", "Eagle's Flight zipline", "zipline Western Ghats"],
     content: `
-      <p>If you have ever dreamed of flying like an eagle high above a dense, mist-shrouded rainforest, then the <strong>Eagle's Flight zipline in Wayanad</strong> is your ultimate ticket to adventure. Spanning an incredible 450 meters across a deep jungle valley in the Western Ghats of Kerala, it stands as India's premier canopy zipline and a bucket-list activity for travelers visiting the region.</p>
+      <p>If you have ever dreamed of flying like an eagle high above a valley of rolling tea gardens, then <strong>Eagle's Flight</strong> is your ultimate ticket to adventure. Spanning an incredible 1.8 kilometers across a deep valley in the Western Ghats, it stands as India's longest zipline and a bucket-list activity for travelers visiting the region.</p>
       
-      <h2>The Anatomy of India's Longest Canopy Zipline</h2>
-      <p>Eagle's Flight is not just an ordinary zipline; it is an engineered aerial highway that suspended riders 150 feet above the valley floor. From the launch tower, the dual steel cables stretch across the forest canopy, vanishing into the mist before terminating at our landing zone on the opposite hillside. But what makes it so special?</p>
+      <h2>The Anatomy of India's Longest Zipline</h2>
+      <p>Eagle's Flight is not just an ordinary zipline; it is an engineered aerial highway that suspends riders up to 250 meters above the valley floor, launching from a platform roughly 2,000 meters above sea level. From the launch tower, the dual steel cables stretch across the tea valley, vanishing into the mist before terminating at the landing zone on the opposite hillside. But what makes it so special?</p>
       <ul>
         <li><strong>Redundant Dual-Cable Design:</strong> Safety is at the core of everything we do. Eagle's Flight uses two parallel aircraft-grade steel cables. Even though one cable is more than strong enough to bear the load, you are harnessed to both, providing 100% structural redundancy.</li>
         <li><strong> CE/UIAA Certified Gear:</strong> Every pulley, harness, karabiner, and helmet is sourced from industry-leading manufacturers like Petzl and Black Diamond, and is checked daily for safety log entries.</li>
-        <li><strong>High-Speed Tandem Pulleys:</strong> We use specialized Petzl speed rollers that deliver a smooth, low-vibration glide, allowing you to reach exhilarating but perfectly controlled speeds.</li>
+        <li><strong>High-Speed Tandem Pulleys:</strong> We use specialized Petzl speed rollers that deliver a smooth, low-vibration glide at speeds of 50&ndash;70 km/h.</li>
       </ul>
 
       <h2>What to Expect on Your First Ride</h2>
-      <p>Your journey begins at our base camp, where you will meet your trained adventure guides. After a personalized gear-up session where we adjust your full-body harness and helmet, we conduct a detailed 10-minute safety brief. We cover body positioning (keep your legs tucked and head back!), how to hold the pulleys, and the landing hand signals.</p>
-      <p>From the briefing deck, a scenic walk along our wooden suspension bridge takes you to the launch tower. Standing on the launch platform, with the Wayanad mist swirling around the treetops, your heart will definitely beat a little faster. Our launch coordinator will double-check your belay locks, open the gate, and with a gentle push, you are airborne.</p>
-      <p>The first few seconds are pure adrenaline as you accelerate over the edge. But as you glide out over the center of the valley, a feeling of serene weightlessness takes over. Below you, wild mountain streams cut through the emerald jungle floor. Around you, the massive branches of ancient pine and teak trees rush past. On a clear day, the peaks of Wayanad stretch out to the horizon in a stunning 360-degree panorama.</p>
+      <p>The full experience takes about two hours from start to finish. It begins with a scenic 7-kilometer 4x4 jeep ascent up to the launch platform, winding through tea plantations along the way. Once there, you will meet your trained adventure guides for a personalized gear-up session where we adjust your full-body harness and helmet, followed by a detailed 10-minute safety brief covering body positioning, how to hold the pulleys, and landing hand signals.</p>
+      <p>Standing on the launch platform with the valley mist swirling below, your heart will definitely beat a little faster. Our launch coordinator will double-check your belay locks, open the gate, and with a gentle push, you are airborne for 2 to 3 minutes of pure flight.</p>
+      <p>The first few seconds are pure adrenaline as you accelerate over the edge. But as you glide out over the center of the valley, a feeling of serene weightlessness takes over. Below you, rolling tea gardens and wild mountain streams stretch across the valley floor. On a clear day, the peaks of the Western Ghats stretch out to the horizon in a stunning 360-degree panorama.</p>
 
-      <h2>Frequently Asked Questions About Wayanad Ziplining</h2>
-      <h3>What is the starting price for Eagle's Flight?</h3>
-      <p>Our zipline experience starts at ₹1,200 per rider, which includes certified safety gear, guide facilitation, and access to our suspension walkway. Group discounts are available for school outings and corporate teams.</p>
+      <h2>Frequently Asked Questions About Eagle's Flight</h2>
+      <h3>What is the price for Eagle's Flight?</h3>
+      <p>Our zipline experience starts at ₹3,999 per rider, which includes the 4x4 jeep ascent, certified safety gear, and guide facilitation. Group discounts are available for school outings and corporate teams.</p>
       
       <h3>Are there weight and age limits?</h3>
       <p>Yes. To ensure the safety braking systems operate within their engineered limits, riders must weigh between 35 kg and 110 kg. The minimum age requirement is 8 years, and all children must have parental consent.</p>
 
       <h3>What should I wear?</h3>
-      <p>We recommend sturdy, closed-toe sports shoes and comfortable athletic clothing. Long hair must be tied back, and loose items (phones, glasses, keys) must be secured or left at our base camp lockers. Avoid skirts, saris, or open sandals.</p>
+      <p>We recommend sturdy, closed-toe sports shoes and comfortable athletic clothing. Long hair must be tied back, and loose items (phones, glasses, keys) must be secured or left at our base camp lockers. Avoid skirts, saris, or open sandals. Weather at altitude can be chilly and windy, so bring a light jacket.</p>
 
-      <h2>How We Care for Safety and the Canopy</h2>
-      <p>At AVASA, we believe that adventure should never come at the cost of the environment. Our launch and landing towers are constructed using eco-friendly timber structures anchored with zero-impact tree felt wraps. This ensures that the tree trunks are protected, and sap flows naturally without bark scraping. Our structural cables are checked daily and undergo rigorous stress audits every month.</p>
+      <h2>How We Care for Safety and the Valley</h2>
+      <p>At AVASA, we believe that adventure should never come at the cost of the environment. Our launch and landing towers are constructed using eco-friendly timber structures anchored with zero-impact protective wraps. Our structural cables are checked daily and undergo rigorous stress audits every month.</p>
       <p>Ready to experience the thrill for yourself? Book a slot on the <a href="/adventure/eagles-flight-zipline">Eagle's Flight Zipline Landing Page</a> and prepare to fly!</p>
     `
   },

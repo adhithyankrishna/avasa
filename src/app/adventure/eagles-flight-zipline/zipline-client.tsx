@@ -32,10 +32,10 @@ const UserGroupIcon = () => (
 );
 
 const GALLERY_PHOTOS = [
-  { id: "photo-1522163182402-834f871fd851", title: "Canopy Glide", desc: "Soaring 150 feet above the Wayanad rainforest canopy." },
+  { id: "photo-1522163182402-834f871fd851", title: "Full Flight", desc: "Soaring up to 250 meters above the tea valleys of the Western Ghats." },
   { id: "photo-1504917595217-d4dc5ebe6122", title: "Launch Platform", desc: "Guides checking double belay anchors before launch." },
-  { id: "photo-1533588841144-7486a55c13f9", title: "Suspended Trails", desc: "Treetop stability bridges connecting canopy nodes." },
-  { id: "photo-1501785888041-af3ef285b470", title: "Valley Vistas", desc: "Panoramic view of the misty Western Ghats from the landing zone." }
+  { id: "photo-1533588841144-7486a55c13f9", title: "Jeep Ascent", desc: "The 7-kilometer 4x4 jeep ride up to the launch platform." },
+  { id: "photo-1501785888041-af3ef285b470", title: "Valley Vistas", desc: "Panoramic view of the misty tea valleys from the landing zone." }
 ];
 
 export default function ZiplineClient() {
@@ -135,7 +135,7 @@ export default function ZiplineClient() {
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
           <span className="eyebrow" style={{ color: "var(--gold)" }}>Flagship Adventure</span>
-          <h1>Eagle's Flight Zipline &mdash; Wayanad's Longest Zip Line</h1>
+          <h1>Eagle's Flight &mdash; India's Longest Zipline</h1>
         </div>
       </section>
 
@@ -143,30 +143,34 @@ export default function ZiplineClient() {
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
-            Fly high on Eagle's Flight, the longest canopy zipline in Wayanad, Kerala. Glide over 450 meters across treetops, ancient forest valleys, and misty mountain ridgelines in absolute safety.
+            Fly Eagle's Flight, India's longest zipline. Glide 1.8 kilometers across tea valleys and misty mountain ridgelines of the Western Ghats, reaching heights of up to 250 meters at speeds of 50&ndash;70 km/h &mdash; in absolute safety.
           </p>
           
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px", margin: "40px 0", textAlign: "center" }}>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Duration</span>
-              <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>45 - 60 Mins</strong>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Zipline Length</span>
+              <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>1.8 KM</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Difficulty</span>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Total Experience</span>
+              <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>~2 Hrs (incl. Jeep Ascent)</strong>
+            </div>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Difficulty</span>
               <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>Moderate</strong>
             </div>
-            <div style={{ padding: "20px", border: "1px solid rgba(18, 35, 63, 0.1)", borderRadius: "4px" }}>
-              <span style={{ display: "block", color: "var(--gold)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>Starting From</span>
-              <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>₹1,200 / rider</strong>
+            <div style={{ padding: "20px", border: "1px solid rgba(14, 67, 60, 0.12)", borderRadius: "4px" }}>
+              <span style={{ display: "block", color: "var(--teal)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px", fontWeight: 600 }}>Starting From</span>
+              <strong style={{ fontSize: "20px", color: "var(--navy)", fontWeight: 500 }}>₹3,999 / rider</strong>
             </div>
           </div>
 
-          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(18, 35, 63, 0.85)" }}>
+          <div style={{ fontSize: "16px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
             <p style={{ marginBottom: "20px" }}>
-              Perched at an altitude of 150 feet above the valley floor, Eagle's Flight is designed for adventure enthusiasts, active families, corporate groups, and travelers seeking an unforgettable bird's-eye view of Wayanad's evergreen canopy. The experience begins at our base camp with a comprehensive safety briefing by our certified instructors, followed by a short scenic trek to the elevated launch tower.
+              Launching from a platform roughly 2,000 meters above sea level and soaring up to 250 meters above the ground below, Eagle's Flight is designed for adventure enthusiasts, active families, corporate groups, and travelers seeking an unforgettable bird's-eye view of the tea valleys of the Western Ghats. The experience begins with a 7-kilometer 4x4 jeep ascent to the launch platform, followed by a comprehensive safety briefing from our certified instructors.
             </p>
             <p>
-              Once harnessed, you'll slide down a double-cable system that delivers smooth, high-speed movement while guaranteeing absolute structural redundancy. Feel the wind rush past as you glide over a massive canyon, witnessing ancient tree ferns, wild streams, and the mist-laden peaks of the Western Ghats stretching out before you.
+              Once harnessed, you'll glide the full 1.8 kilometers at speeds of 50&ndash;70 km/h on a double-cable system that delivers smooth, high-speed movement while guaranteeing absolute structural redundancy. Feel the wind rush past over 2&ndash;3 minutes of pure flight, witnessing rolling tea gardens, wild streams, and the mist-laden peaks of the Western Ghats stretching out before you.
             </p>
           </div>
         </div>
@@ -175,41 +179,65 @@ export default function ZiplineClient() {
       {/* Details & What's Included */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>The Experience in Detail</h2>
+          <h2>The Flight in Detail</h2>
           <p>
-            Every ride on Eagle's Flight is an end-to-end coordinated experience built around international outdoor safety guidelines.
+            From the rugged 4x4 ascent through emerald plantations to the adrenaline-charged launch, every phase of Eagle's Flight is engineered for maximum exhilaration and uncompromising safety.
           </p>
           <div style={{ marginTop: "30px" }}>
-            <Link href="/adventure" style={{ color: "var(--gold)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; View all adventure activities</Link>
-            <Link href="/habitat" style={{ color: "var(--gold)", textDecoration: "underline", display: "block" }}>Explore luxury glamping stays &rarr;</Link>
+            <Link href="/adventure" style={{ color: "var(--navy)", textDecoration: "underline", display: "block", marginBottom: "12px" }}>&larr; Back to Adventure main</Link>
+            <Link href="/habitat/tree-tents" style={{ color: "var(--navy)", textDecoration: "underline", display: "block" }}>Explore tree tent stays &rarr;</Link>
           </div>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Double-Redundant Rigging</h3>
-              <p>Riders slide on two parallel aircraft-grade steel cables, each tested to withstand loads exceeding 5,000 kg. If one is active, the other serves as a constant structural backup.</p>
+              <h3>7 KM 4x4 Jeep Safari Ascent</h3>
+              <p>Your journey begins at our base lodge with a rugged 4x4 off-road drive winding up steep tea plantation tracks to the launch station at 2,000m elevation.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Professional Safety Briefing</h3>
-              <p>A mandatory 10-minute briefing covers body positioning, brake handling, and emergency signals under the direct guidance of our swiftwater and high-altitude certified instructors.</p>
+              <h3>Dual Parallel Flight Cables</h3>
+              <p>Dual redundant 16mm aircraft-grade steel cables allow two riders to launch simultaneously on parallel lines, racing side-by-side across the valley.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Premium Harnesses &amp; Pulleys</h3>
-              <p>We supply climbing-grade full-body harnesses, Petzl tandem speed pulleys, and lightweight certified helmets checked for micro-fractures before every single ride.</p>
+              <h3>Magnetic Gravity Braking</h3>
+              <p>Our eddy-current magnetic braking and progressive spring arrest system ensures a gentle, smooth deceleration and comfortable platform arrival without abrupt stops.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Soft Landing Braking System</h3>
-              <p>Our custom zip-line terminal features a progressive gravity-brake and bungee recovery system, ensuring a smooth, gradual decelerating landing rather than a sudden stop.</p>
+              <h3>CE / UIAA Certified Flight Gear</h3>
+              <p>Every rider is fitted with full-body harnesses, dual-lanyard safety lines, climbing-certified helmets, and heavy-duty flight trolleys inspected daily.</p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="offer-item">
-              <h3>Canopy Walking Bridge</h3>
-              <p>Gain access to the launch platform via a scenic suspension walkway, letting you adjust to the height while stepping through old-growth pine branches.</p>
+      {/* Logistics & What to Bring */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <h2 style={{ textAlign: "center", marginBottom: "40px" }}>Flight Preparation &amp; Logistics</h2>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>What's Included</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Round-trip 4x4 jeep transfer to launch tower</li>
+                <li>Full safety briefing &amp; harness fitting</li>
+                <li>1.8 KM zipline flight with certified guides</li>
+                <li>CE/UIAA helmet, harness &amp; safety lanyard</li>
+                <li>Complimentary flight photo &amp; completion certificate</li>
+              </ul>
+            </div>
+            <div style={{ background: "rgba(14, 67, 60, 0.04)", padding: "30px", borderRadius: "6px" }}>
+              <h3 style={{ fontSize: "18px", marginBottom: "12px", color: "var(--navy)" }}>What to Wear &amp; Bring</h3>
+              <ul style={{ paddingLeft: "20px", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(14, 67, 60, 0.85)" }}>
+                <li>Closed-toe sports/trekking shoes (mandatory)</li>
+                <li>Comfortable athletic clothing (no skirts/dresses)</li>
+                <li>Hair ties to secure long hair</li>
+                <li>Secure strap for spectacles / sunglasses</li>
+                <li>Action cameras must use helmet or chest mounts</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -217,14 +245,14 @@ export default function ZiplineClient() {
 
       {/* Gallery Section */}
       <section className="gallery-section">
-        <h2>Captured on the Canopy</h2>
+        <h2>Moments in Flight</h2>
         <div className="gallery-grid">
           {GALLERY_PHOTOS.map((photo, idx) => (
             <div key={idx} className="gallery-card">
               <div className="gallery-img">
                 <img 
                   src={`https://images.unsplash.com/${photo.id}?auto=format&fit=crop&w=600&q=80`} 
-                  alt={`Guest ziplining across forest canopy on Eagle's Flight, Wayanad — ${photo.title}`} 
+                  alt={`Eagle's Flight India's longest zipline Wayanad Kerala — ${photo.title}`} 
                 />
               </div>
               <div className="gallery-info">
@@ -236,37 +264,37 @@ export default function ZiplineClient() {
         </div>
       </section>
 
-      {/* Safety & Care */}
+      {/* Safety & Rigging */}
       <section className="pinned-split" style={{ background: "var(--navy-deep)", color: "var(--sand)" }}>
         <div className="pinned-left" style={{ color: "var(--sand)" }}>
           <span className="eyebrow">Safety Framework</span>
-          <h2 style={{ color: "var(--sand)" }}>Rigorous Safety Protocols</h2>
-          <p style={{ color: "rgba(237, 232, 220, 0.75)" }}>
-            Our adventure setups are inspected and logged daily. We follow strict international climbing standards to ensure that your flight is thrilling but entirely secure. Read more about <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety and care measures</Link>.
+          <h2 style={{ color: "var(--sand)" }}>Engineered Beyond Standards</h2>
+          <p style={{ color: "rgba(245, 238, 226, 0.75)" }}>
+            Eagle's Flight exceeds international ERCA (European Ropes Course Association) and PRCA standards, with dual redundant cables and continuous electronic line monitoring. Read more in <Link href="/how-we-care" style={{ color: "var(--gold)", textDecoration: "underline" }}>our safety policies</Link>.
           </p>
         </div>
         
-        <div className="pinned-right" style={{ borderColor: "rgba(237, 232, 220, 0.1)" }}>
+        <div className="pinned-right" style={{ borderColor: "rgba(245, 238, 226, 0.1)" }}>
           <div className="care-list" style={{ color: "var(--sand)" }}>
             <li className="safety-coda-item">
-              <RopeIcon />
+              <BoltIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Daily Structural Audits</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every cable span, anchor connection, and platform structure is inspected by engineers before the first rider launches.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Dual Redundant 16mm Cables</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Two parallel galvanized steel aircraft cables with a 12:1 safety factor rating capable of supporting over 18 tons each.</p>
               </div>
             </li>
             <li className="safety-coda-item">
               <ShieldIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified Outdoor Gear</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>Every harness, helmet, rope, and pulley carries CE/UIAA safety certificates and is logged for usage tracking.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Certified Flight Masters</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Every launch and recovery is operated by guides certified in high-angle rope rescue and emergency protocols.</p>
               </div>
             </li>
             <li className="safety-coda-item">
-              <UserGroupIcon />
+              <SparklesIcon />
               <div>
-                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>First Aid Certified Guides</h3>
-                <p style={{ color: "rgba(237, 232, 220, 0.7)", fontSize: "14.5px", margin: 0 }}>All platform instructors are certified in wilderness first aid and rescue techniques to handle any scenario safely.</p>
+                <h3 style={{ color: "var(--gold)", fontSize: "18px", fontWeight: 500, margin: "0 0 8px 0" }}>Daily Load &amp; Tension Testing</h3>
+                <p style={{ color: "rgba(245, 238, 226, 0.75)", fontSize: "14.5px", margin: 0 }}>Cable tension, anchor integrity, braking components, and trolley bearings are tested with deadweight test runs every morning before opening.</p>
               </div>
             </li>
           </div>
@@ -284,8 +312,8 @@ export default function ZiplineClient() {
               <span className="faq-plus">{openFaqIndex === 0 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 0 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
-                Eagle's Flight is Wayanad's longest zipline and one of the longest in India, covering a total horizontal distance of 450 meters from launch to landing.
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
+                Eagle's Flight is India's longest zipline, covering a total distance of 1.8 kilometers from launch to landing, with heights of up to 250 meters above the ground.
               </div>
             )}
           </div>
@@ -296,8 +324,8 @@ export default function ZiplineClient() {
               <span className="faq-plus">{openFaqIndex === 1 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 1 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
-                Yes, for safety limits: riders must weigh between 35 kg (minimum) and 110 kg (maximum) to maintain correct speeds and ensure the braking mechanism functions properly. Height should be at least 4 feet (120 cm).
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
+                Yes, for safety limits: riders must wear between 35 kg (minimum) and 110 kg (maximum) to maintain correct speeds and ensure the braking mechanism functions properly. Height should be at least 4 feet (120 cm).
               </div>
             )}
           </div>
@@ -308,7 +336,7 @@ export default function ZiplineClient() {
               <span className="faq-plus">{openFaqIndex === 2 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 2 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 Wear comfortable athletic clothing and sturdy, closed-toe sports shoes. Avoid loose clothing, skirts, open sandals, and tuck in long hair. Pockets should be empty, and jewelry/glasses secured.
               </div>
             )}
@@ -320,7 +348,7 @@ export default function ZiplineClient() {
               <span className="faq-plus">{openFaqIndex === 3 ? "-" : "+"}</span>
             </div>
             {openFaqIndex === 3 && (
-              <div className="faq-a" style={{ color: "rgba(18, 35, 63, 0.8)", paddingTop: "15px" }}>
+              <div className="faq-a" style={{ color: "rgba(14, 67, 60, 0.85)", paddingTop: "15px" }}>
                 No. While we have dual parallel cables so two riders can fly side-by-side, each cable is strictly single-rider only. Tandem riding (two people on one line) is not permitted.
               </div>
             )}
@@ -337,7 +365,7 @@ export default function ZiplineClient() {
         ></div>
         <div className="overlay"></div>
         <div className="content">
-          <h2>Soar over the rainforest canopy.</h2>
+          <h2>Soar over the tea valleys of the Western Ghats.</h2>
           <button onClick={openEnquiry}>Book Your Flight Now</button>
         </div>
       </section>
