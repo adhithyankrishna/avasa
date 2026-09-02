@@ -7,26 +7,42 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsapLib.registerPlugin(ScrollTrigger);
 
-const ShieldIcon = () => (
+const ShieldIcon = ({ style }: { style?: React.CSSProperties }) => (
   <span className="care-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={style || { width: "24px", height: "24px", color: "var(--gold)" }}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
     </svg>
   </span>
 );
 
-const TrophyIcon = () => (
+const TrophyIcon = ({ style }: { style?: React.CSSProperties }) => (
   <span className="care-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={style || { width: "24px", height: "24px", color: "var(--gold)" }}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.504-1.125-1.125-1.125h-.75a1.125 1.125 0 01-1.125-1.125V18.75m9 0V18.75M9 10.5h.008v.008H9V10.5zm.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 3v13.5m0-13.5a3 3 0 11-6 0 3 3 0 016 0zm0 0a3 3 0 106 0 3 3 0 00-6 0z" />
     </svg>
   </span>
 );
 
-const UserGroupIcon = () => (
+const UserGroupIcon = ({ style }: { style?: React.CSSProperties }) => (
   <span className="care-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={style || { width: "24px", height: "24px", color: "var(--gold)" }}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.109A11.386 11.386 0 0110.012 19c-.485-.005-.967-.03-1.444-.075L8.25 18.75m3.75-2.7h-1.5m1.5 2.7H9.75m1.5-2.7h-1.5m1.5 2.7H8.25m3.75-2.7a6.002 6.002 0 00-4.75 3.32M10.5 9.75a3 3 0 11-6 0 3 3 0 016 0zm10.5 0a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  </span>
+);
+
+const CheckCircleIcon = ({ style }: { style?: React.CSSProperties }) => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={style || { width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+  </span>
+);
+
+const BuildingOfficeIcon = ({ style }: { style?: React.CSSProperties }) => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={style || { width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
     </svg>
   </span>
 );

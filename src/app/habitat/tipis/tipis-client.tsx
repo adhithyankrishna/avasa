@@ -32,6 +32,22 @@ const ShieldIcon = () => (
   </span>
 );
 
+const CheckCircleIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+    </svg>
+  </span>
+);
+
+const SparklesIcon = () => (
+  <span className="care-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" style={{ width: "24px", height: "24px", color: "var(--gold)" }}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+    </svg>
+  </span>
+);
+
 const GALLERY_PHOTOS = [
   { id: "photo-1504280390367-361c6d9f38f4", title: "Tipi Tribe Sunset", desc: "Canvas tipis casting long silhouettes at sunset in Wayanad." },
   { id: "photo-1478131148053-7667689d3112", title: "Cozy Tipi Interiors", desc: "Premium rugs, low cushions, and insulated layout inside the tipi." },
