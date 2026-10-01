@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --navy: #0E433C;
+  --navy: #004036;
   /* rich royal emerald/forest teal */
   --navy-deep: #072622;
   /* deep opulent spruce teal, deepest backgrounds */
@@ -9,7 +9,7 @@
   /* lush midtone pine / sea spray for secondary blocks & gradients */
   --sage: #A4BCB4;
   /* muted eucalyptus/sage for dividers & subtle badges */
-  --sand: #F5EEE2;
+  --sand: #FAF2DC;
   /* warm luminous linen sand - main warm neutral */
   --gold: #D4B26F;
   /* authentic warm royal champagne gold - prestigious, radiant & elegant */
