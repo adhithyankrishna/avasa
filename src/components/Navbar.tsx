@@ -51,8 +51,8 @@ export default function Navbar() {
         {/* Left Links */}
         <div className="nav-links-left">
           <Link href="/">HOME</Link>
-          <Link href="/living-classrooms">OUTDOOR LEARNING</Link>
-          <Link href="/adventure">ADVENTURE ACTIVITIES</Link>
+          <Link href="/living-classrooms">LIVING CLASSROOMS</Link>
+          <Link href="/adventure">ADVENTURE</Link>
         </div>
 
         {/* Centered Logo Link - Targeted by useScrollLogoTransition for dynamic landing coordinates */}
@@ -67,8 +67,8 @@ export default function Navbar() {
         {/* Right Links & Action */}
         <div className="nav-group-right">
           <div className="nav-links-right">
-            <Link href="/habitat">LUXURY STAYS</Link>
-            <Link href="/projects">B2B SERVICES</Link>
+            <Link href="/habitat">HABITAT</Link>
+            <Link href="/projects">PROJECTS</Link>
             <Link href="/how-we-care">SAFETY & CARE</Link>
           </div>
           <div className="nav-action">
@@ -90,10 +90,10 @@ export default function Navbar() {
           </div>
           <div className="mobile-menu-links">
             <Link href="/" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>HOME</Link>
-            <Link href="/living-classrooms" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>OUTDOOR LEARNING</Link>
-            <Link href="/adventure" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>ADVENTURE ACTIVITIES</Link>
-            <Link href="/habitat" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>LUXURY STAYS</Link>
-            <Link href="/projects" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>B2B SERVICES</Link>
+            <Link href="/living-classrooms" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>LIVING CLASSROOMS</Link>
+            <Link href="/adventure" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>ADVENTURE</Link>
+            <Link href="/habitat" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>HABITAT</Link>
+            <Link href="/projects" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>PROJECTS</Link>
             <Link href="/how-we-care" className="mobile-menu-link" onClick={() => setMenuOpen(false)}>SAFETY & CARE</Link>
           </div>
         </div>

@@ -11,16 +11,16 @@ export default function Footer() {
             <Logo />
           </div>
           <p>
-            Experience & Beyond. Creating immersive, purposeful, and transformative nature encounters.
+            Designing Experiences. Shaping Possibilities.
           </p>
         </div>
         
         <div className="footer-col">
           <h4>Explore</h4>
-          <Link href="/living-classrooms">Outdoor Learning</Link>
-          <Link href="/adventure">Adventure Activities</Link>
-          <Link href="/habitat">Luxury Stays</Link>
-          <Link href="/projects">B2B Services</Link>
+          <Link href="/living-classrooms">Living Classrooms</Link>
+          <Link href="/adventure">Adventure</Link>
+          <Link href="/habitat">Habitat</Link>
+          <Link href="/projects">Projects</Link>
           <Link href="/guides">Travel Guides</Link>
           <Link href="/how-we-care">Safety &amp; Care</Link>
         </div>

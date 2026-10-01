@@ -465,39 +465,12 @@ export default function Homepage() {
                 <Logo className="hero-brand-logo" />
               </div>
               <h1 id="hero-tagline-text" className="serif-title hero-brand-tagline">
-                Experiences And Beyond!
+                Designing Experiences. Shaping Possibilities.
               </h1>
             </div>
 
             {/* Bottom quick navigation bar */}
-            <div className="hero-quick-nav">
-              <div className="quick-nav-bar">
-                <Link href="/adventure" className="quick-nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l4.03 3.359a.75.75 0 01.272.575v12.122a.75.75 0 01-.75.75h-3.75a.75.75 0 01-.75-.75v-3.75a.75.75 0 00-.75-.75H9.75a.75.75 0 00-.75.75v3.75a.75.75 0 01-.75.75H4.5a.75.75 0 01-.75-.75V8.397a.75.75 0 01.273-.575l4.029-3.36a1.125 1.125 0 01.608-.263v-.568c0-.621.504-1.125 1.125-1.125h1.125c.621 0 1.125.504 1.125 1.125z" />
-                  </svg>
-                  <span>Adventure</span>
-                </Link>
-                <Link href="/habitat" className="quick-nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>
-                  <span>Stay</span>
-                </Link>
-                <Link href="/living-classrooms" className="quick-nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 017.218 5.84c-.808.236-1.693.509-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                  </svg>
-                  <span>School</span>
-                </Link>
-                <Link href="/projects" className="quick-nav-item">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                  </svg>
-                  <span>Cooperate</span>
-                </Link>
-              </div>
-            </div>
+
 
             <div className="scroll-cue">Scroll ↓</div>
           </div>
@@ -505,14 +478,41 @@ export default function Homepage() {
           {/* 4. Welcome content layer */}
           <div className="layer welcome-content-layer">
             <div className="hw__welcome-content">
-              <span className="eyebrow">Experience &amp; Beyond</span>
+              <span className="eyebrow">The AVASA Story</span>
               <p>
-                Where the world gets a little quieter, and life gives you real moments back.
+                AVASA creates experiences that bring people closer to nature, learning, adventure and one another.
               </p>
             </div>
           </div>
         </section>
       </div>
+
+      {/* The AVASA Story & What We Do Intro Section */}
+      <section className="section-pad" style={{ background: "var(--sand)", color: "var(--navy)", textAlign: "center" }}>
+        <div style={{ maxWidth: "880px", margin: "0 auto" }}>
+          <span className="eyebrow" style={{ color: "var(--gold)" }}>The AVASA Story</span>
+          <h2 className="serif-title" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.25, marginBottom: "28px", color: "var(--navy)" }}>
+            Experiences that stay with you.
+          </h2>
+          <p style={{ fontSize: "20px", fontStyle: "normal", fontWeight: 300, lineHeight: 1.6, marginBottom: "20px", color: "var(--navy)" }}>
+            AVASA creates experiences that bring people closer to nature, learning, adventure and one another.
+          </p>
+          <p style={{ fontSize: "16px", lineHeight: "1.75", color: "rgba(14, 67, 60, 0.85)", marginBottom: "20px" }}>
+            From outdoor learning and adventure experiences to nature-based stays and experiential infrastructure, we design experiences that are immersive, purposeful and built to create lasting memories.
+          </p>
+          <p style={{ fontSize: "16px", lineHeight: "1.75", color: "rgba(14, 67, 60, 0.85)", marginBottom: "64px" }}>
+            Our work spans destinations, institutions, hospitality and communities, bringing together experience design, outdoor environments and thoughtful execution.
+          </p>
+
+          <span className="eyebrow" style={{ color: "var(--gold)" }}>What We Do</span>
+          <h2 className="serif-title" style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.25, marginBottom: "20px", color: "var(--navy)" }}>
+            Four ways we create experiences
+          </h2>
+          <p style={{ fontSize: "16.5px", lineHeight: "1.75", color: "rgba(14, 67, 60, 0.85)" }}>
+            AVASA operates across four interconnected verticals, bridging education, wilderness immersion, sustainable hospitality, and bespoke spatial design.
+          </p>
+        </div>
+      </section>
 
       {/* Unified Pillars Showcase (Sequential Background Blending & Floating Right Previews) */}
       <section id="pillars-showcase-pin">
@@ -534,8 +534,7 @@ export default function Homepage() {
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
-                <h3 className="card-title">Outdoor Learning</h3>
-                <p className="card-desc">Outdoor classes, camps, and team activities for schools and companies. Real learning, outside.</p>
+                <h3 className="card-title">Living Classrooms</h3>
               </div>
             </div>
 
@@ -543,8 +542,7 @@ export default function Homepage() {
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
-                <h3 className="card-title">Adventure Activities</h3>
-                <p className="card-desc">Zipline, kayaking, and trekking in Kerala's forests. Try Eagle's Flight, our longest zipline.</p>
+                <h3 className="card-title">Adventure</h3>
               </div>
             </div>
 
@@ -552,8 +550,7 @@ export default function Homepage() {
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
-                <h3 className="card-title">Luxury Stays</h3>
-                <p className="card-desc">Sleep in a tree tent, dome, or tipi. Comfortable stays, close to nature.</p>
+                <h3 className="card-title">Habitat</h3>
               </div>
             </div>
 
@@ -561,8 +558,7 @@ export default function Homepage() {
               <div className="card-bg" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="card-overlay"></div>
               <div className="card-content">
-                <h3 className="card-title">B2B Services</h3>
-                <p className="card-desc">We build ziplines, tree tents, and adventure parks for resorts and schools across India.</p>
+                <h3 className="card-title">Projects</h3>
               </div>
             </div>
           </div>
@@ -570,38 +566,59 @@ export default function Homepage() {
           {/* Sequential Text Blocks (Fades in on the left side) */}
           <div className="showcase-content-blocks">
             <div className="pillar-content block-living">
-              <span className="eyebrow" style={{ color: "var(--sand)" }}>Outdoor Learning</span>
-              <h2>The outdoors, as the curriculum.</h2>
-              <p>Learning outside a classroom, in real forests and open land. We run outdoor camps and team programs for schools, colleges, and companies — hands-on, not just lectures.</p>
+              <span className="eyebrow" style={{ color: "var(--sand)" }}>Living Classrooms</span>
+              <h2>The outdoors, as the curriculum</h2>
+              <p>Experiential, curriculum-linked learning outdoors through field studies, challenge, and direct engagement with the wild.</p>
+              <p className="pillar-audience">For progressive schools, universities and institutions.</p>
+              <div className="pillar-highlights">
+                <span>Field science, conservation and habitat studies</span>
+                <span>Applied STEM &amp; Field Studies</span>
+                <span>Leadership &amp; Problem-Solving</span>
+              </div>
               <Link href="/living-classrooms" className="pillar-link">
-                Explore Outdoor Learning &rarr;
+                Explore Living Classrooms &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-adventure">
-              <span className="eyebrow">Adventure Activities</span>
-              <h2>Eagle's Flight &mdash; India's longest zipline.</h2>
-              <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
+              <span className="eyebrow">Adventure</span>
+              <h2>Adventure begins beyond the familiar</h2>
+              <p>Active expeditions and backcountry journeys designed to build resilience, perspective, and deep ecological connection.</p>
+              <div className="pillar-highlights">
+                <span>Canopy Flight &amp; High Ropes</span>
+                <span>Water Sports</span>
+                <span>Backcountry Trekking &amp; Navigation</span>
+              </div>
               <Link href="/adventure" className="pillar-link">
-                Explore Adventure Activities &rarr;
+                Explore Adventure &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-habitat">
-              <span className="eyebrow">Luxury Stays</span>
-              <h2>Sleep among the treetops.</h2>
-              <p>Sleep among the trees. Choose a tree tent, a glass dome, or a tipi — comfortable stays deep in nature, without giving up comfort.</p>
+              <span className="eyebrow">Habitat</span>
+              <h2>Live closer to the landscape</h2>
+              <p>Low-impact stays and eco-retreats embedded directly into the landscape, balancing elemental comfort with authentic character.</p>
+              <div className="pillar-highlights">
+                <span>Canopy Living</span>
+                <span>Modular Ground Stays</span>
+                <span>Elemental Eco-Sanctuaries</span>
+              </div>
               <Link href="/habitat" className="pillar-link">
-                Explore Luxury Stays &rarr;
+                Explore Habitat &rarr;
               </Link>
             </div>
 
             <div className="pillar-content block-projects">
-              <span className="eyebrow">B2B Services</span>
-              <h2>We build the infrastructure others dream in.</h2>
-              <p>We design and build adventure parks — ziplines, tree tents, and nature trails — for resorts, schools, and tourism projects across India.</p>
+              <span className="eyebrow">Projects</span>
+              <h2>We build what experience demands.</h2>
+              <p>Turnkey design and build of eco-experiential infrastructure for campuses, hospitality brands, and nature destinations.</p>
+              <div className="pillar-highlights">
+                <span>Suspended Canopy Nets &amp; Walkways</span>
+                <span>Commercial Ziplines &amp; High-Angle Adventure</span>
+                <span>Master Site Planning &amp; Leave-No-Trace Execution</span>
+              </div>
               <Link href="/projects" className="pillar-link">
-                Explore B2B Services &rarr;
+                Explore Projects &rarr;
               </Link>
             </div>
           </div>
@@ -611,48 +628,78 @@ export default function Homepage() {
             <div className="pillar-merged-card" onClick={() => router.push("/living-classrooms")}>
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/living_classrooms_hero.webp')" }}></div>
               <div className="merged-card-body">
-                <h3>Outdoor Learning</h3>
-                <p>Learning outside a classroom, in real forests and open land. We run outdoor camps and team programs for schools, colleges, and companies — hands-on, not just lectures.</p>
-                <Link href="/living-classrooms" className="pillar-link">Explore Outdoor Learning &rarr;</Link>
+                <h3>Living Classrooms</h3>
+                <p>Experiential, curriculum-linked learning outdoors through field studies, challenge, and direct engagement with the wild.</p>
+                <p className="pillar-audience">For progressive schools, universities and institutions.</p>
+                <div className="pillar-highlights">
+                  <span>Field science, conservation and habitat studies</span>
+                  <span>Applied STEM &amp; Field Studies</span>
+                  <span>Leadership &amp; Problem-Solving</span>
+                </div>
+                <Link href="/living-classrooms" className="pillar-link">Explore Living Classrooms &rarr;</Link>
               </div>
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/adventure")}>
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/adventure_hero.webp')" }}></div>
               <div className="merged-card-body">
-                <h3>Adventure Activities</h3>
-                <p>Home to Eagle's Flight, one of the longest ziplines in India. Try ziplining, kayaking, bamboo rafting, and guided treks across Kerala's forests and rivers.</p>
-                <Link href="/adventure" className="pillar-link">Explore Adventure Activities &rarr;</Link>
+                <h3>Adventure</h3>
+                <p>Active expeditions and backcountry journeys designed to build resilience, perspective, and deep ecological connection.</p>
+                <div className="pillar-highlights">
+                  <span>Canopy Flight &amp; High Ropes</span>
+                  <span>Water Sports</span>
+                  <span>Backcountry Trekking &amp; Navigation</span>
+                </div>
+                <Link href="/adventure" className="pillar-link">Explore Adventure &rarr;</Link>
               </div>
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/habitat")}>
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/habitat_hero.webp')" }}></div>
               <div className="merged-card-body">
-                <h3>Luxury Stays</h3>
-                <p>Sleep among the trees. Choose a tree tent, a glass dome, or a tipi — comfortable stays deep in nature, without giving up comfort.</p>
-                <Link href="/habitat" className="pillar-link">Explore Luxury Stays &rarr;</Link>
+                <h3>Habitat</h3>
+                <p>Low-impact stays and eco-retreats embedded directly into the landscape, balancing elemental comfort with authentic character.</p>
+                <div className="pillar-highlights">
+                  <span>Canopy Living</span>
+                  <span>Modular Ground Stays</span>
+                  <span>Elemental Eco-Sanctuaries</span>
+                </div>
+                <Link href="/habitat" className="pillar-link">Explore Habitat &rarr;</Link>
               </div>
             </div>
 
             <div className="pillar-merged-card" onClick={() => router.push("/projects")}>
               <div className="merged-card-img" style={{ backgroundImage: "url('/assets/images/projects_hero.webp')" }}></div>
               <div className="merged-card-body">
-                <h3>B2B Services</h3>
-                <p>We design and build adventure parks — ziplines, tree tents, and nature trails — for resorts, schools, and tourism projects across India.</p>
-                <Link href="/projects" className="pillar-link">Explore B2B Services &rarr;</Link>
+                <h3>Projects</h3>
+                <p>Turnkey design and build of eco-experiential infrastructure for campuses, hospitality brands, and nature destinations.</p>
+                <div className="pillar-highlights">
+                  <span>Suspended Canopy Nets &amp; Walkways</span>
+                  <span>Commercial Ziplines &amp; High-Angle Adventure</span>
+                  <span>Master Site Planning &amp; Leave-No-Trace Execution</span>
+                </div>
+                <Link href="/projects" className="pillar-link">Explore Projects &rarr;</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Vision C closing title card */}
+      {/* Vision C closing title card / Our Philosophy */}
       <section id="vision" className="section-pad">
-        <span className="eyebrow">Decade Ten</span>
-        <h2>
-          Over the next decade, AVASA aims to become a leading experience design company across South Asia and the Middle East — building a globally recognised brand that inspires curiosity and leaves a lasting positive impact.
-        </h2>
+        <span className="eyebrow">Our Philosophy</span>
+        <h2>We believe the best experiences are lived, not explained.</h2>
+        <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "800px", margin: "32px auto 0", color: "rgba(245, 238, 226, 0.85)" }}>
+          AVASA operates at the intersection of nature, human curiosity, and low-impact spatial design. We create living environments where people disconnect from noise to truly observe, participate, and adapt.
+        </p>
+        <p style={{ fontSize: "18px", lineHeight: "1.7", maxWidth: "800px", margin: "20px auto 0", color: "rgba(245, 238, 226, 0.85)" }}>
+          Whether it is a student navigating a raw backcountry trail, a guest waking up suspended within the canopy, or a destination brand reimagining its ecological identity, our principle is unyielding.
+        </p>
+        <p style={{ fontSize: "14px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600, color: "var(--gold)", margin: "40px auto 0", lineHeight: 2.2 }}>
+          MAKE IT MEANINGFUL.<br />
+          MAKE IT IMMERSIVE.<br />
+          MAKE IT MEMORABLE.
+        </p>
       </section>
 
       {/* Exploding Cascading Photo Mosaic Section */}
@@ -660,7 +707,7 @@ export default function Homepage() {
         <div className="pin-stage">
           <div className="stage-label">Adventure &middot; Habitat &middot; Living Classrooms &middot; Projects</div>
           <div className="center-caption">
-            <h3 className="serif-title">Every experience, one story</h3>
+            <h3 className="serif-title">From ideas to experiences.</h3>
             <span>Scroll to Settle</span>
           </div>
           <div id="tile-container">

@@ -88,80 +88,88 @@ export default function ProjectsAndConsulting() {
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
-          <span className="eyebrow" style={{ color: "var(--gold)" }}>Pillar 04 &mdash; Engineering</span>
-          <h1>We build the infrastructure others dream in</h1>
+          <span className="eyebrow" style={{ color: "var(--gold)" }}>The technical engineering behind the experience.</span>
+          <h1>Projects</h1>
         </div>
       </section>
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
-          AVASA is an end-to-end partner for landowners, eco-resorts, schools, and corporate campuses across India. We plan, engineer, and construct high-performance adventure and eco-tourism installations.
+          AVASA partners with eco-resorts, educational institutions, government bodies, and destination developers to conceive, engineer, and build turn-key experiential infrastructure that respects the surrounding ecology.
         </p>
         <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
-          AVASA designs and builds adventure infrastructure — ziplines, tree tents, tree nets, and adventure parks — for resorts, schools, and tourism developments across India. We handle safety consulting, site design, and installation from planning to opening day.
+          From initial feasibility and ecological survey to precision rigging and full-scale build, we bridge bold architectural vision with rigorous on-ground execution.
         </p>
       </section>
 
       {/* Pinned List Sections */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>Our Services</h2>
-          <p>
-            From initial site zoning and environmental impact planning to final stress logs and certification, we build structures that endure.
-          </p>
+          <h2>Design &amp; Build Scope</h2>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Adventure Park Design</h3>
-              <p>Zoning and layout designs for high-ropes courses, forest obstacle networks, and climbing decks.</p>
+              <h3>Suspended Canopy Nets &amp; Walkways</h3>
             </div>
             
             <div className="offer-item">
-              <h3>Zipline Design &amp; Installation</h3>
-              <p>Turnkey engineering of structural cable spans, launcher towers, and brake recovery networks.</p>
+              <h3>Commercial Ziplines &amp; High-Angle Adventure</h3>
             </div>
 
             <div className="offer-item">
-              <h3>Tree Tent &amp; Tree Net Installation</h3>
-              <p>Safe rigging of suspended hammock hubs and tree tent villages without harming old-growth bark.</p>
+              <h3>Low-Impact Campgrounds &amp; Glamping Layouts. Parks</h3>
             </div>
 
             <div className="offer-item">
-              <h3>Landscape Transformation</h3>
-              <p>Shaping outdoor sites into interactive spaces while maintaining biological integrity.</p>
+              <h3>Integrated Campus Learning Spaces &amp; Field Science Pods</h3>
             </div>
 
             <div className="offer-item">
-              <h3>Eco-Tourism Development</h3>
-              <p>Complete master planning and infrastructure setup for low-impact adventure destinations.</p>
+              <h3>Wilderness Trails, Via Ferrata &amp; Technical Access Routes</h3>
             </div>
 
             <div className="offer-item">
-              <h3>Destination Planning</h3>
-              <p>Land zoning, safety routing, and visitor experience flow charting for public and private estates.</p>
+              <h3>Master Site Planning &amp; Leave-No-Trace Execution</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Selected Portfolio Section */}
+      <section className="pinned-split">
+        <div className="pinned-left">
+          <h2>Selected Portfolio</h2>
+          <p>From raw terrain to iconic spaces.</p>
+        </div>
+        
+        <div className="pinned-right">
+          <div className="offer-list">
+            <div className="offer-item">
+              <h3>Eagle&apos;s Flight</h3>
+              <p>India&apos;s longest zipline — a 1.8 km mountain zipline experience across the tea valleys of Munnar, combining engineered adventure with an immersive journey through the landscape.</p>
+            </div>
+            
+            <div className="offer-item">
+              <h3>Stingray Tribe</h3>
+              <p>Suspended canopy camping networks introducing travelers to life in the trees.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Safety Consulting &amp; Inspections</h3>
-              <p>Rigorous structural audits, anchor pull-testing, and gear certifications for existing parks. Learn more about <Link href="/how-we-care" style={{ color: "var(--navy)", textDecoration: "underline" }}>how we care for safety</Link>.</p>
+              <h3>Tipi Tribe</h3>
+              <p>Modular, heavy-canvas glamping setups optimized for sensitive landscapes.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Experience Design Consulting</h3>
-              <p>Helping brands shape outdoor programs, guest pathways, and custom hospitality concepts.</p>
+              <h3>Living Classrooms</h3>
+              <p>Bespoke outdoor school programs blending environmental science, field navigation, and collaborative grit.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Outdoor Learning Space Design</h3>
-              <p>Building wooden forest circles, campsites, and amphitheaters optimized for wilderness education.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Equipment Supply &amp; Commissioning</h3>
-              <p>Sourcing and certifying climbing-grade cables, harnesses, pulleys, and rescue hardware.</p>
+              <h3>Wildside Suspension Net Complex</h3>
+              <p>Pioneering ultra-scale, high-tensile tree-net infrastructure set above living wildlife corridors.</p>
             </div>
           </div>
         </div>

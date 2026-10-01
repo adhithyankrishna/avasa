@@ -138,85 +138,52 @@ export default function Adventure() {
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
-          <span className="eyebrow" style={{ color: "var(--gold)" }}>Pillar 02 &mdash; Adventure</span>
-          <h1>Eagle's Flight &mdash; India's longest zipline</h1>
+          <span className="eyebrow" style={{ color: "var(--gold)" }}>Adventure with purpose.</span>
+          <h1>Adventure</h1>
         </div>
       </section>
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
-          Thrills planned with precision. We curate high-adrenaline expeditions and activities for individuals, active families, and corporate squads seeking genuine adventure.
+          True adventure is not an adrenaline rush; it is a catalyst for self-reliance, perspective, and genuine kinship with the wild. We craft intentional outdoor journeys that test limits, shift viewpoints, and forge unbreakable camaraderie.
         </p>
         <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
-          Looking for adventure activities in Kerala? AVASA runs zipline rides, kayaking trips, and guided treks across Wayanad, Munnar, and the Chaliyar river. Our most popular activity is Eagle's Flight, one of the longest ziplines in India. Every activity includes safety gear, a trained guide, and support from start to finish.
+          Anchored by Eagle&apos;s Flight — India&apos;s longest zipline, AVASA&apos;s adventures bring people closer to the landscape through exploration, challenge and discovery.
         </p>
       </section>
 
       {/* Pinned List Sections */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>What's Included</h2>
-          <p>
-            From high-altitude canopy lines to fast rapid runs, every experience is guided by certified professionals and outfitted with safety-first protective gear.
-          </p>
+          <h2>Signature Capabilities</h2>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Eagle's Flight Zipline</h3>
-              <p>Experience India's longest zipline, flying high above the rainforest canopy on double-redundant lines.</p>
+              <h3>Canopy Flight &amp; High Ropes</h3>
+              <p>Technical ziplines and suspended aerial courses.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Kayaking</h3>
-              <p>Paddle down scenic rivers and navigate wild rapids under the direction of swiftwater rescue guides.</p>
+              <h3>Water Sports</h3>
+              <p>Sea and river kayaking, touring, and traditional bamboo rafting.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Bamboo Rafting</h3>
-              <p>Build and float traditional rafts on calm stretches of Kerala's lush rivers.</p>
+              <h3>Backcountry Trekking &amp; Navigation</h3>
+              <p>Off-grid trail exploration and route-finding.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Trekking</h3>
-              <p>Guided day treks and multi-day mountain climbs passing through tea hills and remote ridges.</p>
+              <h3>Wilderness Survival &amp; Campcraft</h3>
+              <p>Traditional fire-craft, field cooking, and shelter mechanics.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Wilderness Camping</h3>
-              <p>Sleep under stars in pristine, low-impact camp sites equipped with solid base-camp systems.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Tree Net Experiences</h3>
-              <p>Bounce and lounge on massive rope net bridges suspended high between centuries-old bark.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Adventure Team Building</h3>
-              <p>High-ropes, obstacle routes, and team problem-solving challenges in dense forests.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Orienteering &amp; Compass Work</h3>
-              <p>Learn compass reading and navigation techniques to locate control points in dense valleys.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Survival &amp; Bushcraft</h3>
-              <p>Hands-on training in woodcarving, shelter building, firecraft, and wilderness prep.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Campfire Nights</h3>
-              <p>Relax around the embers with acoustic music, local dining, and shared mountain stories.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Sunrise &amp; Sunset Expeditions</h3>
-              <p>High-altitude ridge walks timed to capture the early mist and golden hour skyline views.</p>
+              <h3>Collective Team Challenges</h3>
+              <p>High-trust experiential group missions.</p>
             </div>
           </div>
         </div>

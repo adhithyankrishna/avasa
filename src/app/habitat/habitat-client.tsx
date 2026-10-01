@@ -128,55 +128,45 @@ export default function Habitat() {
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
-          <span className="eyebrow" style={{ color: "var(--sand)" }}>Pillar 03 &mdash; Habitat</span>
-          <h1>Sleep among the treetops</h1>
+          <span className="eyebrow" style={{ color: "var(--sand)" }}>The wilderness as the classroom.</span>
+          <h1>Habitat</h1>
         </div>
       </section>
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
-          Habitat replaces traditional hotel stays with low-impact, design-forward structures. Experience a deep, immersive stay directly inside the canopy without leaving comfort behind.
+          AVASA designs and operates distinctive, minimal-impact eco-accommodations that dissolve the boundary between guest and terrain. By blending structural lightness with uncompromised comfort, we allow people to stay inside nature, not just look at it.
         </p>
         <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
-          Want a glamping stay in Kerala? Choose from tree tents, glass domes, or tipi camps at AVASA's Stingray Tribe and Tipi Tribe locations. Each stay includes meals, guide support, and a comfortable setup close to nature — without giving up basic comforts.
+          Live closer to the landscape.
         </p>
       </section>
 
       {/* Pinned List Sections */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>Stays &amp; Shelters</h2>
+          <h2>Zero-Footprint Sanctuaries</h2>
           <p>
-            Each structure is engineered to interact with the landscape gently, offering panoramic views, clean airflow, and quiet isolation.
+            Thoughtful Comfort. Enduring Character.
           </p>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Stingray Tribe Tensile Tree Tents</h3>
-              <p>Sleep suspended between old-growth trees inside triple-tensile hammock tents offering 360 canopy views.</p>
+              <h3>Canopy Living</h3>
+              <p>Suspended tree tents, sky-sleepers, and high-tensile tree nets.</p>
             </div>
             
             <div className="offer-item">
-              <h3>Tipi Tribe Glamping</h3>
-              <p>Spacious, premium canvas tipis mounted on elevated wooden platforms with warm lighting and comfortable layouts.</p>
+              <h3>Modular Ground Stays</h3>
+              <p>Heavy-canvas tipis, geodesic zomes, and earth-anchored pods.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Suspended Tree Tents</h3>
-              <p>Lightweight tensile setups for multi-day expeditions that elevate your sleeping deck off the damp forest floor.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Geodesic Dome Eco-Lodges</h3>
-              <p>Premium insulated dome stays featuring glass window panels, ensuite baths, and sunrise mountain decks.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Stargazing &amp; Campfire Spaces</h3>
-              <p>Dedicated common spaces built for astronomical viewing, fireplace conversations, and evening dining.</p>
+              <h3>Elemental Eco-Sanctuaries</h3>
+              <p>Architecture designed around seasonal breezes, forest quiet, and night skies.</p>
             </div>
           </div>
         </div>

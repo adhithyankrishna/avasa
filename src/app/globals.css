@@ -387,25 +387,28 @@ nav .btn-enquire:hover {
   pointer-events: none;
 }
 
-/* Scrim & Contrast (Option A: Navy Text on Cream Scrim) */
+/* Scrim & Contrast (High Contrast Cream Scrim on Bright Sky) */
 .hw__welcome-content {
   pointer-events: auto;
-  max-width: 820px;
+  max-width: 840px;
   margin: 0 auto;
-  padding: 60px 80px;
-  border-radius: 16px;
-  background: radial-gradient(ellipse at center, rgba(245, 238, 226, 0.94) 0%, rgba(245, 238, 226, 0.72) 60%, rgba(245, 238, 226, 0) 90%);
-  color: var(--navy);
+  padding: 56px 64px;
+  border-radius: 20px;
+  background: rgba(245, 238, 226, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px rgba(7, 38, 34, 0.22), 0 0 0 1px rgba(212, 178, 111, 0.3);
+  color: var(--navy-deep);
   text-align: center;
 }
 
 .hw__welcome-content p {
   font-family: var(--serif-font);
   /* Jost */
-  font-size: clamp(22px, 3.2vw, 38px);
+  font-size: clamp(22px, 3.2vw, 36px);
   line-height: 1.45;
-  font-weight: 400;
-  color: var(--navy);
+  font-weight: 500;
+  color: var(--navy-deep);
   margin-top: 12px;
 }
 
@@ -413,8 +416,8 @@ nav .btn-enquire:hover {
   font-family: var(--serif-font);
   /* Jost */
   font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--teal);
   display: block;
@@ -661,7 +664,79 @@ nav .btn-enquire:hover {
   font-size: 15px;
   line-height: 1.8;
   color: rgba(245, 238, 226, 0.9);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.pillar-content .pillar-audience {
+  font-size: 13.5px;
+  font-style: italic;
+  color: rgba(245, 238, 226, 0.65);
+  margin-top: -6px;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+.pillar-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 0;
+  margin-bottom: 28px;
+}
+
+.pillar-highlights span {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(245, 238, 226, 0.75);
+  line-height: 1.5;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pillar-highlights span:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 11px;
+  background: rgba(212, 178, 111, 0.5);
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
+/* Home Page Pillar Buttons */
+.pillar-content .pillar-link,
+.pillar-merged-card .pillar-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--sans-font);
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.pillar-content .pillar-link:hover,
+.pillar-merged-card .pillar-link:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 178, 111, 0.35);
 }
 
 .pillar-link {
@@ -1824,13 +1899,12 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 24px 18px;
+  padding: 28px 20px;
   z-index: 5;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 180px;
 }
 
 .pillar-card .card-num {
@@ -1844,29 +1918,17 @@ footer {
 
 .pillar-card .card-title {
   font-family: var(--serif-font);
-  font-size: 21px;
+  font-size: 25px;
   color: var(--sand);
   font-weight: 400;
   line-height: 1.25;
-  margin: 0 0 10px 0;
+  margin: 0;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  min-height: 32px;
   white-space: nowrap;
   letter-spacing: 0.02em;
-}
-
-.pillar-card .card-desc {
-  font-size: 13.5px;
-  color: rgba(245, 238, 226, 0.88);
-  line-height: 1.45;
-  opacity: 1;
-  margin: 0;
-  min-height: 60px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 1px 3px rgba(0, 0, 0, 0.95);
 }
 
 /* Hover effects */
@@ -1879,12 +1941,6 @@ footer {
   background: linear-gradient(180deg, rgba(7, 38, 34, 0.05) 0%, rgba(7, 38, 34, 0.95) 100%);
 }
 
-.pillar-card:hover .card-desc {
-  opacity: 1;
-  max-height: none;
-  margin-top: 8px;
-}
-
 /* Sequential Text Blocks Overlay */
 .showcase-content-blocks {
   position: absolute;
@@ -1892,7 +1948,8 @@ footer {
   left: 8vw;
   transform: translateY(-50%);
   width: 45%;
-  height: 420px;
+  min-height: 440px;
+  height: auto;
   z-index: 15;
   pointer-events: none;
 }
@@ -1967,7 +2024,7 @@ footer {
   }
 
   .merged-card-body {
-    padding: 20px;
+    padding: 24px 20px;
     color: var(--sand);
     text-align: center;
   }
@@ -1991,6 +2048,38 @@ footer {
     line-height: 1.6;
     color: rgba(245, 238, 226, 0.9);
     margin-bottom: 14px;
+  }
+
+  .merged-card-body .pillar-audience {
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(245, 238, 226, 0.65);
+    margin-top: -6px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .merged-card-body .pillar-highlights {
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0 24px;
+    row-gap: 8px;
+  }
+
+  .merged-card-body .pillar-highlights span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .merged-card-body .pillar-highlights span:not(:last-child)::after {
+    margin: 0 10px;
+  }
+
+  .pillar-merged-card .pillar-link {
+    margin: 0 auto;
   }
 
   .nav-menu-btn {
@@ -2039,13 +2128,17 @@ footer {
   }
 
   .hw__welcome-content {
-    padding: 40px 24px;
-    background: radial-gradient(ellipse at center, rgba(245, 238, 226, 0.96) 0%, rgba(245, 238, 226, 0.78) 70%, rgba(245, 238, 226, 0) 95%);
+    padding: 36px 20px;
+    background: rgba(245, 238, 226, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 16px 40px rgba(7, 38, 34, 0.2);
   }
 
   .hw__welcome-content p {
     font-size: clamp(18px, 3.2vw, 26px);
     line-height: 1.45;
+    color: var(--navy-deep);
   }
 
   .sub-hero h1 {

@@ -131,80 +131,51 @@ export default function LivingClassrooms() {
         ></div>
         <div className="overlay" style={{ backgroundColor: "var(--theme-overlay)" }}></div>
         <div className="content">
-          <span className="eyebrow">Pillar 01 &mdash; Living Classrooms</span>
-          <h1>The outdoors, as the curriculum</h1>
+          <span className="eyebrow">The wilderness as the classroom.</span>
+          <h1>Living Classrooms</h1>
         </div>
       </section>
 
       {/* Intro section on Sand */}
       <section className="sub-intro section-pad" style={{ background: "var(--sand)", color: "var(--navy)" }}>
         <p style={{ fontSize: "22px", fontStyle: "normal", fontWeight: 300, maxWidth: "800px", margin: "0 auto", textAlign: "center", lineHeight: 1.6, marginBottom: "40px" }}>
-          Living Classrooms moves growth out of the traditional school walls and directly into nature. We deliver custom experiential learning, leadership camps, and survival skill workshops tailored for schools, universities, and corporate teams.
+          Through Living Classrooms, AVASA creates experiential learning programmes for progressive schools, universities and institutions. We transform natural environments into dynamic learning spaces that build resilience, problem-solving and ecological awareness.
         </p>
         <p style={{ fontSize: "16px", lineHeight: "1.7", maxWidth: "800px", margin: "0 auto", textAlign: "center", color: "rgba(14, 67, 60, 0.85)" }}>
-          AVASA runs outdoor learning programs for schools, colleges, and companies across Kerala. Programs include leadership camps, survival skills, and environmental education — all led outside a classroom, in real forests and open land. Transport and trained facilitators are included with every program.
+          Programmes can be delivered through low-impact campus installations or fully supported wilderness expeditions.
         </p>
       </section>
 
       {/* Pinned List Sections */}
       <section className="pinned-split">
         <div className="pinned-left">
-          <h2>Outdoors Curriculum</h2>
-          <p>
-            Nature is our textbook. We design programs that challenge teams and students physically and mentally, fostering resilience, unity, and environmental stewardship.
-          </p>
+          <h2>Curriculum Focus Areas</h2>
         </div>
         
         <div className="pinned-right">
           <div className="offer-list">
             <div className="offer-item">
-              <h3>Campus Experiential Learning</h3>
-              <p>Curriculum-linked nature programs integrated directly onto your school grounds or campus area.</p>
+              <h3>Field science, conservation and habitat studies</h3>
             </div>
             
             <div className="offer-item">
-              <h3>Outdoor Adventure Camps</h3>
-              <p>Multi-day wilderness immersions focused on teamwork, campcraft, and outdoor living protocols.</p>
+              <h3>Adventure &amp; Resilience</h3>
+              <p>Navigation, bushcraft, wilderness safety and responsible risk-taking.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Leadership Development</h3>
-              <p>Action-based leadership drills designed to test decision-making and project communication under pressure.</p>
+              <h3>Applied STEM &amp; Field Studies</h3>
+              <p>Microclimates, hydrology, geography and field research.</p>
             </div>
 
             <div className="offer-item">
-              <h3>Survival &amp; Life Skills</h3>
-              <p>Practical bushcraft, including rope knots, shelter construction, navigation, and foraging basics.</p>
+              <h3>Leadership &amp; Problem-Solving</h3>
+              <p>Teamwork, communication, trust and shared challenges</p>
             </div>
 
             <div className="offer-item">
-              <h3>Environmental Education</h3>
-              <p>Field science covering forest canopy biology, wildlife ecology, and local ecosystem conservation.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Leave No Trace Workshops</h3>
-              <p>Instilling outdoor ethics and sustainable recreation protocols to protect wilderness spaces.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Nature Interpretation Walks</h3>
-              <p>Slow-paced, guide-led ecology studies designed to spark environmental curiosity and awareness.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Outdoor First Aid Training</h3>
-              <p>Practical wilderness medicine and response training for guides, educators, and explorers.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>School Expeditions</h3>
-              <p>Custom educational adventures designed for academic cohorts seeking real-world wilderness testing.</p>
-            </div>
-
-            <div className="offer-item">
-              <h3>Custom Programs</h3>
-              <p>Bespoke programs built around your specific educational goals, scheduling, and accommodation preferences.</p>
+              <h3>Heritage &amp; Local Knowledge</h3>
+              <p>Regional traditions, culture and sustainable ways of living.</p>
             </div>
           </div>
         </div>
